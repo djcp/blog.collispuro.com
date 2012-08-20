@@ -1,0 +1,9 @@
+---
+layout: post
+title: "A new octopress blog"
+date: 2012-08-19 22:24
+comments: true
+categories: 
+---
+
+How droll. A new octopress blog published to heroku.
