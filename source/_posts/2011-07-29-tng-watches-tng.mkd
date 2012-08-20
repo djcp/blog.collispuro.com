@@ -1,0 +1,14 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "TNG watches TNG"
+type: post
+---
+My daughter knows NOTHING about Star Trek - she's never seen an episode, doesn't know what a Klingon or a Vulcan is. She does have the ability to enjoy large, complicated storylines as evidenced by her love of LoTR, Harry Potter, and a whole bookshelf of young adult literature.
+
+In this series of blog posts, I'm going to chronicle "Star Trek: The Next Generation" through her eyes.

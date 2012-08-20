@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="[kml_flashembed movie="http://vimeo.com/moogaloop.swf?clip_id=3970262&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/page/11/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/09/realtime-tracking-of-online-censorship/">Realtime Tracking of Online Censorship.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-09T00:00:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>[kml_flashembed movie="http://vimeo.com/moogaloop.swf?clip_id=3970262&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" width="400" height="319" wmode="transparent" /]</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/18/mod_passenger-error-page-includes-external-stylesheet/">Mod_passenger Error Page Includes External Stylesheet.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-18T00:00:00-04:00" pubdate data-updated="true">Mar 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>No sir, I don&#8217;t like it. Not at all.</p>
+
+<p>The default mod_passenger &#8220;this app wouldn&#8217;t start&#8221; page includes an external CSS file:</p>
+
+<p>http://www.modrails.com/error_pages/1.0/error_page.css</p>
+
+<p>which is odd, considering there&#8217;s a bunch of inline CSS. I guess it&#8217;s to include the images&#8230; but it also amounts to disclosing something unintentionally. Yuck.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/09/difference-between-count-and-length-in-rails/">Difference Between &#8220;Count&#8221; and &#8220;Length&#8221; in Rails.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-09T00:00:00-04:00" pubdate data-updated="true">Mar 9<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I made an interesting discovery the other day between how &#8220;count&#8221; and &#8220;length&#8221; function with an ActiveRecord model, one that can be exploited effectively to speed up an app, as long as you understand the consequences.</p>
+
+<ul>
+<li>Invoking &#8220;count&#8221; on an array (or dependent relationship) will <strong>always</strong> hit the database, and do something similar to <strong>select count(id) as count_all from contacts</strong> every time you invoke it.</li>
+    <li>Invoking &#8220;length&#8221; on an array (or dependent relationship) will only hit the database once. If the relationship has already been populated (say by :include-ing the dependent objects in your Model.find method), the database won&#8217;t get hit at all.</li>
+</ul>
+
+
+<p>So - if you&#8217;re OK not getting a count that&#8217;s 100% accurate at the time of method invocation, &#8220;length&#8221; will do the right thing and run the necessary SQL statement the first time it&#8217;s run. Otherwise, it&#8217;ll give you the array count, which may be out of sync with the database.</p>
+
+<p>This can have significant performance benefits if you&#8217;re iterating through many records and emitting counts of dependent objects. :include-ing the dependent objects and using &#8220;length&#8221; decreased the SQL expense of a page view 40 fold in one case.</p>
+
+<p>Once again, it&#8217;s good to know your tools.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/02/10/railsvim/">Rails.vim</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-10T00:00:00-05:00" pubdate data-updated="true">Feb 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Frequently a tool crops up that makes me feel foolish for not using it - that tool today is <a href="http://rails.vim.tpope.net/" target="_blank">Rails.vim</a>. It rocks in so many ways I am seriously considering having Tim Pope&#8217;s babies - were such a thing possible.</p>
+
+<ul>
+<li>Automatic method completion!</li>
+    <li>Automatic switching to fixtures, unit tests, and other context-sensitive actions!</li>
+    <li>Excellent syntax highlighting!</li>
+    <li>Hooks into your script/ directory!</li>
+</ul>
+
+
+<p>And really too much stuff to articulate here. Just use it! Yay for IDEs that don&#8217;t slow you down - I&#8217;m looking at you, <a href="http://www.aptana.com/rails" target="_blank">RadRails</a>.</p>
+
+<p>Getting it working under modern <a href="http://www.ubuntu.com" target="_blank">Ubuntus</a> (ubunti?) is stupid easy (as a normal user):</p>
+
+<pre> sudo aptitude install vim-rails
+ vim-rails-setup
+</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/01/19/single-drive-wipe-protects-data-research-finds/">Single Drive Wipe Protects Data, Research Finds</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-19T00:00:00-05:00" pubdate data-updated="true">Jan 19<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ha. <a href="http://www.securityfocus.com/brief/888">I knew it.</a></p>
+
+<p><code>shred -n1 /dev/sda2</code></p>
+
+<p>should be more than sufficient to wipe your sda2 partition and make its data unrecoverable.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/01/14/rails-22-postgres-and-testing/">Rails 2.2, Postgres, and Testing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-14T00:00:00-05:00" pubdate data-updated="true">Jan 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you&#8217;re using <a href="http://www.postgresql.org">Postgresql</a> with Rails 2.2, your testing database user needs to be a &#8220;superuser&#8221; for your tests to run. <strong>This is not a good thing.</strong> It&#8217;s the equivalent of running as root. But, if you&#8217;ve got a completely separate development/testing server it&#8217;s better than not being able to test at all.</p>
+
+<p>If your postgres testing user isn&#8217;t a superuser, you&#8217;ll get errors like:</p>
+
+<pre>ActiveRecord::StatementInvalid: PGError: ERROR:  permission \
+denied: "RI_ConstraintTrigger_17866" is a system trigger</pre>
+
+
+<p>You can create a postgres superuser thusly:</p>
+
+<pre>> su - postgres
+> psql template1
+> template1=# create user  <strong>your username</strong> superuser;</pre>
+
+
+<p>Update the testing stanza of your config/database.yml and you should be good to go.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/23/perl5-uses-git/">Perl5 Now Uses Git.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-23T00:00:00-05:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://use.perl.org/articles/08/12/22/0830205.shtml" target="_blank">Perl5 now uses git for source control</a>, and the complete commit history from the development of Perl 5 was ported too. That had to be a ton of work. Congrats!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/11/public-radio-fundraising-redux/">Public Radio Fundraising Redux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-11T00:00:00-05:00" pubdate data-updated="true">Dec 11<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I hereby release this idea to the Public Radio fundraising community:</p>
+
+<blockquote>When an individual contributes during an pledge drive, that individual gets a personalized URL / link / token / podcast whatever that gives them the live broadcast with all fundraising appeals stripped out.</blockquote>
+
+
+<p>Yeah, it&#8217;s not that simple I&#8217;m sure. You&#8217;d have to either be out-of-sync timewise (to make up for the total time taken up by the fundraising appeals) or you&#8217;d have to fill the space with some other content.</p>
+
+<p>I bet this&#8217;d be an attractive option to many, though. Rather than the weak &#8220;we&#8217;ll end the fund drive right now if enough people give&#8221; pitch, each individual would end it for themselves when they pony up.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/04/gittorrent-git-repos-with-distributed-file-storage/">GitTorrent - Git Repos With Distributed File Storage.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-04T00:00:00-05:00" pubdate data-updated="true">Dec 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://advogato.org/article/994.html">My mind has been sufficiently blown.</a></p>
+
+<p>Free software source code hosting with political resiliency baked right in - I guess you&#8217;re already immune to political strife when your code is &#8220;free as in speech.&#8221;  This strikes me as fitting the &#8220;trust but verify&#8221; adage quite nicely.</p>
+
+<p>The powers that be aren&#8217;t going to mess with my perfectly legal free software, but <caveats status="applied">restricting my ability to code what I want isn&#8217;t going to faze me when it&#8217;s replicated across a bajillion nodes. </caveats></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/10/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/19/new-post/">A new octopress blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/">Wrap-up of my first week at thoughtbot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e17-sins-of-the-father/">S3:E17 - Sins of the Father</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e16-the-offspring/">S3:E16 - The Offspring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s318-allegiance/">S3:18 - Allegiance</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

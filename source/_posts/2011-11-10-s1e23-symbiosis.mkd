@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S1:E23 - Symbiosis"
+type: post
+---
+"The drug people, they were obsessed with drugs. The rich planet was mean and they didn't tell the poor planet that they weren't sick any more. I don't like that they did that. The crew gave them the drug but they didn't give them the ship repairing things. I think the poor planet is going to get better and then they'll learn how to build their own stuff and fix ships. Hopefully the rich planet will learn not to be mean."

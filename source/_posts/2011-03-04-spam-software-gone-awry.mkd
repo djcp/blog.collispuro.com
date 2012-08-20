@@ -1,0 +1,14 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - spam
+title: "Spam software gone awry"
+type: post
+---
+I like it when a spammer's engine of destruction malfunctions and their tricks are laid bare. A recent spam comment had this username: 
+
+<blockquote>The {sheer|utter|large} available {information|info|data|information and facts} online {makes|can make|tends to make|creates} {finding a|getting a|locating a|choosing a|selecting a} {good information|reliable information|straight answers} directory {reall</blockquote>

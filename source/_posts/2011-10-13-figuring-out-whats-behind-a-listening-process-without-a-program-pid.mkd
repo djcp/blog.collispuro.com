@@ -1,0 +1,55 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - debian
+  - linux
+  - security
+  - sysadmin
+title: "Figuring out what's behind a listening process without a program / pid."
+type: post
+---
+Say you're being a good sysadmin and you're checking out listeners on your machines:
+
+<pre>
+root@deathstar:~# netstat -pant | grep LISTEN
+tcp        0      0 127.0.0.1:873           0.0.0.0:*               LISTEN      3947/rsync      
+tcp        0      0 0.0.0.0:8649            0.0.0.0:*               LISTEN      3826/gmond      
+tcp        0      0 192.168.10.122:9102     0.0.0.0:*               LISTEN      4167/bacula-fd  
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      3229/portmap    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3468/sshd       
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      3930/master     
+tcp        0      0 0.0.0.0:44572           0.0.0.0:*               LISTEN      -               
+tcp        0      0 0.0.0.0:34271           0.0.0.0:*               LISTEN      3247/rpc.statd  
+tcp6       0      0 :::22                   :::*                    LISTEN      3468/sshd       
+</pre>
+
+lolwut is listening on 44572 ?
+
+<pre>
+ lsof -i -n -P | grep 44572
+</pre>
+
+returns nothing! IT MUST BE A ROOTKIT!!eleventy!!! 
+
+Wait - maybe portmapper has assigned it to a kernel-level server?
+
+<pre>
+root@deathstar:~# pmap_dump
+    100000    2   tcp    111  portmapper
+    100000    2   udp    111  portmapper
+    100024    1   udp  44915  status
+    100024    1   tcp  34271  status
+    100021    1   tcp  44572  nlockmgr
+    100021    3   tcp  44572  nlockmgr
+    100021    4   tcp  44572  nlockmgr
+</pre>
+
+Whew- it's nlockmgr, part of nfs file locking. 
+
+So the moral of the story - just because netstat can't determine a program or pid doesn't mean you're in trouble. Check portmapper's assignments via pmap_dump first, as it might be innocuous.   
+
+Apparently netstat can be made aware of portmapper assignments, but it doesn't appear it is aware of kernel level services - or - it just doesn't work for me.

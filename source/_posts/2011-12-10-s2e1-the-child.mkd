@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S2:E1 - The Child"
+type: post
+---
+<blockquote>Riker has a beard! Why does he have a beard this time? The little boy is cute. He grows really fast and he's 10, then he dies. He's a little glowy-thing. He wants to know what happens, he's not being mean.</blockquote>

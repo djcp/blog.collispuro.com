@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S1:E22 - The Arsenal of Freedom"
+type: post
+---
+"That one had the crazy droid things trying to kill everyone. The crazy droid things wiped everyone out on the planet. They separated the saucer and Jordi took over the ship. Why was that guy disagreeing with Jordi? He was a jerk."

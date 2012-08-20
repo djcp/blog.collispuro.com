@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S3:E11 - The Hunted"
+type: post
+---
+<blockquote>That guy who had extreme strength, he'd been genetically altered. His instincts would kick in whenever he was in danger, flipping full grown men in the air. Then Troi was being friendly with the man and he didn't like it. The Enterprise just said "Bye-bye. Your problem!" when the soldier guy got back on the planet.</blockquote>

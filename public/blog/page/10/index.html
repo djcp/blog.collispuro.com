@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="This is so easy, and really is just basic git: git clone http://github.com/rails/rails.git
+cd rails git diff -r v2.3.2 v2.3.5 and you&#8217;ve got a &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/page/10/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/27/diffing-two-rails-releases/">Diff&#8217;ing Two Rails Releases</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-27T00:00:00-04:00" pubdate data-updated="true">Apr 27<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is so easy, and really is just basic git:</p>
+
+<pre>
+<code>
+git clone http://github.com/rails/rails.git
+cd rails 
+git diff -r v2.3.2 v2.3.5
+</code>
+</pre>
+
+
+<p>and you&#8217;ve got a diff of 2.3.2 versus 2.3.5. Enjoy!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/03/27/a-simple-bash-password-safe/">A Simple Bash Gpg &#8220;Password Safe&#8221;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-27T00:00:00-04:00" pubdate data-updated="true">Mar 27<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is definitely not military quality - but if you need a simple way to manage a GPG-encrypted file containing info you want to protect this works pretty well for me.  I use this to manage a set of passwords on a trusted machine that I can ssh to.</p>
+
+<p>It assumes you&#8217;re using a bash-like shell and have a trusted private key available in the account you&#8217;re running it on.
+[sourcecode language=&#8221;bash&#8221;]</p>
+
+<h1>!/bin/bash</h1>
+
+<p>KEYS=&#8221;&#8221;</p>
+
+<p>if [ ! -e &#8220;$HOME/private&#8221; ]
+then</p>
+
+<pre><code>mkdir -m 700 "$HOME/private"
+umask 77 "$HOME/private/"
+</code></pre>
+
+<p>fi</p>
+
+<h1>Always delete the unencrypted file at the end of the session. We DO NOT want this hanging around.</h1>
+
+<p>trap &#8220;rm -f &#34;$HOME/private/${USER}<em>private_store.txt&#34;; chmod 600 &#34;$HOME/private/${USER}</em>private_store.txt&#34;*; exit&#8221; INT TERM EXIT</p>
+
+<p>touch &#8220;$HOME/private/${USER}<em>private_store.txt&#8221;
+chmod 600 &#8220;$HOME/private/${USER}</em>private_store.txt&#8221;</p>
+
+<p>gpg &#8211;decrypt &#8220;$HOME/private/${USER}<em>private_store.txt.asc&#8221; > &#8220;$HOME/private/${USER}</em>private_store.txt&#8221;
+vim &#8220;$HOME/private/${USER}_private_store.txt&#8221;</p>
+
+<p>md5sum  &#8220;$HOME/private/${USER}_private_store.txt.md5sum.new&#8221;</p>
+
+<p>if [ -e &#8220;$HOME/private/${USER}_private_store.txt.md5sum&#8221; ]
+then</p>
+
+<pre><code>if [ "`cmp "$HOME/private/${USER}_private_store.txt.md5sum.new" "$HOME/private/${USER}_private_store.txt.md5sum"`" == "" ]
+then
+    clear
+    rm -f "$HOME/private/${USER}_private_store.txt.md5sum.new"
+    echo 'No changes, not re-encrypting'
+    exit
+fi
+</code></pre>
+
+<p>fi</p>
+
+<p>mv &#8220;$HOME/private/${USER}<em>private_store.txt.md5sum.new&#8221; &#8220;$HOME/private/${USER}</em>private_store.txt.md5sum&#8221;</p>
+
+<p>echo &#8216;File has changed. Re-encrypting&#8230;&#8217;
+gpg -a &#8211;encrypt -r $KEYS &#8220;$HOME/private/${USER}_private_store.txt&#8221;
+clear</p>
+
+<p>[/sourcecode]</p>
+
+<p>First time it runs it&#8217;ll create a private directory, start vim, and encrypt the text you enter into vim. On subsequent runs it&#8217;ll prompt you for your private key passphrase and repeat the cycle. It won&#8217;t re-encrypt if there haven&#8217;t been any changes.</p>
+
+<p>I&#8217;m betting wordpress messes up the code, so here&#8217;s the text file: <a href="http://blogs.law.harvard.edu/djcp/files/2010/03/edit_password_safe.sh">edit_password_safe.sh</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/28/nginx-as-a-front-end-proxy-cache-for-wordpress/">Nginx as a Front-end Proxy Cache for Wordpress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-28T00:00:00-05:00" pubdate data-updated="true">Jan 28<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="http://blogs.law.harvard.edu/djcp/files/2010/01/nginx-wp-love.jpg" alt="nginx-wp-love" title="nginx-wp-love" width="325" height="39" class="alignright size-full wp-image-80"><strong>The short version:</strong></p>
+
+<p>We put an nginx caching proxy server in front of our wordpress mu install and sped it up dramatically - in some cases a thousandfold.  I&#8217;ve packaged up a plugin, along with installation instructions here - <a href="http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/">Wordpress Nginx proxy cache integrator</a>.</p>
+
+<p><strong>The long version:</strong></p>
+
+<p>Here at <a href="http://blogs.law.harvard.edu/">blogs.law.harvard.edu,</a> our wordpress mu was having problems. We get a fair amount of traffic (650k+ visits/month), - combine that with &#8216;bots (good and bad) - and we were having serious problems. RSS feeds (we serve many from some <a href="http://blogs.law.harvard.edu/doc">pretty</a> <a href="http://blogs.law.harvard.edu/philg">prominent</a> <a href="http://blogs.law.harvard.edu/mesh">blogs.</a>) are expensive to create, files are gatewayed through PHP (on wpmu), and letting PHP dynamically create each page meant we were VERY close to maxing out our capacity - which we frequently did, bringing our blogs to a crawl.</p>
+
+<p>Wordpress - as lovely as it is - needs some kind of caching system in place once you start to see even moderate levels of traffic. There are <a href="http://wordpress.org/extend/plugins/wp-super-cache/">many</a>, <a href="http://wordpress.org/extend/plugins/w3-total-cache/">many</a> high quality and well-maintained options for caching - however, none of them really made me happy, or fit my definition of the &#8220;holy grail&#8221; of how a web app cache should work.</p>
+
+<p>In my mind, caching should:</p>
+
+<ul>
+<li>be high performance (digg and slashdot proof),</li>
+<li>light-weight,</li>
+<li>be structured to avoid invoking the heavy application frameworks it sits in front of. If you hit your app server (in this case, wordpress) - you&#8217;ve failed.</li>
+<li>be as unobtrusive as possible: caching should be a completely separate layer that lives above your web apps,</li>
+<li>have centralized and easily tweaked rules, and</li>
+<li>be flexible enough to work for any type (or amount) of traffic.</li>
+</ul>
+
+
+<p>So I decided to put a proxy in front of wordpress to static cache as much as possible. ALL non-authenticated traffic is served directly from the nginx file cache, taking some requests (such as RSS feed generation) from 6 pages/second to 7000+ pages/second. Oof.  Nginx also handles logging and gzipping, leaving the heavier backend apaches to do what they do best: serve dynamic wordpress pages only when needed.</p>
+
+<p>A frontend proxy also handles &#8220;lingering closes&#8221; - clients that fail to close a connection, or that take a long time to do so (say, for instance, because they&#8217;re on a slow connection).  Taken to an extreme, lingering closes act as a <a href="http://hackaday.com/2009/06/17/slowloris-http-denial-of-service/">&#8220;slow loris&#8221;</a> attack, and without a frontend proxy your heavy apaches are left tied up. With a lightweight frontend proxy, you can handle more connections with less memory. Throw a cache in the mix and you can bypass the backend entirely, giving you absolutely SILLY scalability.</p>
+
+<p>On nginx - it&#8217;s so efficient it&#8217;s scary. I&#8217;ve never seen it use more than 10 to 15 meg of RAM and a blip of CPU, even under our heaviest load.  Our <a href="http://ganglia.sourceforge.net">ganglia</a> graphs don&#8217;t lie: we halved our memory requirements, doubled our outgoing network throughput and completely leveled out our load. We have had basically no problems since we set this up.</p>
+
+<p>To make a long story short (too late), I packaged this up as a plugin along with detailed installation and configuration info. Check it out! Feedback appreciated: <a href="http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/">Wordpress Nginx proxy cache integrator</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/11/convert-mysql-database-from-latin1-to-utf8-the-right-way/">Convert Mysql Database From Latin1 to Utf8 the RIGHT Way</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-11T00:00:00-05:00" pubdate data-updated="true">Jan 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You&#8217;ll see many blog posts around the interwebs stating that you can just dump a mysql database via mysqldump - globally replace &#8220;latin1&#8221; (or some other character set) in the dump file - and then import that into a utf8 database and it&#8217;ll just work. This appears, however, to be WRONG. It does not force mysql to convert the text, it only fools you into believing that that your latin1 characters have been converted.  You have to actually convert the text yourself, the columns will just be unconverted latin1 sitting in a utf8 table.</p>
+
+<p>One way to do this is to convert the column in question to binary and back again - assuming your database/table is set to utf8, this will force MySQL to convert the character set correctly.</p>
+
+<p>Another - better  - way is to just use iconv to convert during the dump process.  This will convert latin1 characters to utf8 properly.</p>
+
+<p><code>mysqldump --add-drop-table database_to_correct  | replace CHARSET=latin1 CHARSET=utf8 | iconv -f latin1 -t utf8 | mysql database_to_correct</code></p>
+
+<p>PLEASE correct me if I&#8217;m wrong - this seems like yet another mysql idiosyncrasy that shouldn&#8217;t exist.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/17/play-flac-ogg-anything-on-your-pre-from-anywhere-with-ampache/">Play Flac, Ogg, Anything From Anywhere on Your Pre With Ampache Mobile</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-17T00:00:00-05:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was looking for a way to play my music collection (which is primarily ogg and flac) from anywhere, preferably with some sort of automatic transcoding feature. In the past I&#8217;ve just mounted my music collection via sshfs (more about that <a href="http://blogs.law.harvard.edu/djcp/2009/09/cool-stuff-you-can-do-with-ssh-and-fuse/">here</a>) and then played music with some heavyweight app like Amarok. This is fine, but flac files are too large to be streamed realistically.</p>
+
+<p>So - along came <a href="http://ampache.org/">Ampache</a> - an open-source PHP app that is just CHOCK full of features. Just crazy. It&#8217;s got a responsive AJAX interface, creates many different types of playlists, can transcode on the fly to other formats / bitrates and was fairly easy to install. It&#8217;s just awesome, and pretty much any music player can read an Ampache stream.</p>
+
+<p>THEN I discovered <a href="http://forums.precentral.net/homebrew-apps/200423-ampache-mobile.html">Ampache Mobile</a> (<a href="http://code.google.com/p/ampache-mobile/">google code page</a>) - a FOSS Palm Pre app that hooks into your Ampache instance via XML-RPC. Amazing! I get  flac/ogg files transcoded to 96kbps MP3 streams on-the-fly, allowing me to listen to all my music anywhere I have a Sprint network connection. The app is beautiful, functional, and has made my Pre even more indispensible than it was before.</p>
+
+<p>If you&#8217;ve got a Pre and a home server with even moderate upload speed, GET THIS WORKING. Now.</p>
+
+<p><strong>Edit: </strong> Corrected Ampache Mobile link. Thanks, bjgeiser!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/29/cool-stuff-you-can-do-with-ssh-and-fuse/">Cool Stuff You Can Do With Ssh and Fuse</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-29T00:00:00-04:00" pubdate data-updated="true">Sep 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://fuse.sourceforge.net/">fuse</a> over ssh rocks, as we all know.  It allows you to mount remote filesystems anywhere you reach with SCP or SSH.  But wait - there&#8217;s more!</p>
+
+<h2>Run commands on the filesystems of hosts you don&#8217;t control</h2>
+
+
+<p>I needed to use <a href="http://www.samba.org/rsync/">rsync</a> on a host I don&#8217;t control (godaddy, in this case). So I used fuse to remotely mount the godaddy filesystem and then used rsync to do a local copy.</p>
+
+<pre>sshfs -C godaddyuser@godaddyhostname.org:/var/chroot/home/content/38/382342342/html/ ~/godaddy/
+rsync -auvz --delete-excluded ~/godaddy/ ~/godaddy-copy/</pre>
+
+
+<p>I also created a git repo on that remote godaddy fuse mount - I feel naked without source control.</p>
+
+<pre>cd ~/godaddy/ && git init</pre>
+
+
+<p>just like working directly on the machine - except slower because of the network overhead.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/17/chromium-incognito-browsing-its-not-just-for-porn/">Chromium Incognito Browsing - It&#8217;s Not Just for Porn!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-17T00:00:00-04:00" pubdate data-updated="true">Sep 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve been using <a href="http://code.google.com/chromium/">google chromium</a> more and more for work because it&#8217;s so FREAKING fast compared to Firefox&#8230; if it had <a href="http://adblockplus.org">Adblock Plus</a> and <a href="http://getfirebug.com/">firebug</a> I&#8217;d probably abandon firefox altogether&#8230; So for work-related sites, chromium is a clear winner because it lets me work faster. For personal browsing, I find the web almost intolerable without adblock plus - so firefox wins there.</p>
+
+<p>Anyway: a really nice benefit of Chromium&#8217;s incognito browsing is that it has a separate set of cookies than your main Chromium window (of course, that&#8217;s the point) - allowing you to log in to the same site twice with different credentials. This is handy when you&#8217;re developing a site that does different things depending on who you are.  It appears that all incognito windows share the same cookies, though, so you can&#8217;t log into the same site as three different users in three different incognito windows (at least not that I&#8217;ve found, yet).</p>
+
+<p>One can probably do similar things in firefox via profiles or an extension or two. I like that it&#8217;s built-in and easily accessible in Chromium, though.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/07/14/why-i-use-the-gpl-by-zed-shaw/">&#8220;Why I Use the GPL&#8221; by Zed Shaw</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-14T00:00:00-04:00" pubdate data-updated="true">Jul 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://zedshaw.com/blog/2009-07-13.html">An interesting read</a> that I think is spot-on.</p>
+
+<p>I don&#8217;t see any statement that clearly says &#8220;this rant is mainly because I chose the wrong license for Mongrel&#8221;, but beyond that his points about the GPL fostering contributions is 100% correct.</p>
+
+<p>I dunno. I tend to choose the &#8220;default license&#8221; of the language / framework I&#8217;m building in: maybe I&#8217;ll need to rethink that.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/05/27/secure-http-connections-over-untrusted-networks/">&#8220;Secure&#8221; Http Connections Over Untrusted Networks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-27T00:00:00-04:00" pubdate data-updated="true">May 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Oh, <a href="http://openssh.org">ssh</a>. How I love thee.</p>
+
+<p>So I wanted to log in to wordpress blog with a login page NOT behind an HTTPS connection from an &#8220;insecure&#8221; network - in this case, it was the MBTA&#8217;s commuter rail wifi.</p>
+
+<p>SSH supports SOCKS proxy connections and makes this STUPIDLY simple:</p>
+
+<p><code><pre>ssh -C -D 8000 name-of-your-proxy-ssh-server.com</pre></code></p>
+
+<p>&#8220;-C&#8221; turns on compression, &#8220;-D 8000&#8221; makes the SOCKS proxy connection on localhost&#8217;s port 8000.</p>
+
+<p>Then you need to set your local firefox to use &#8220;localhost&#8221;, port 8000 as a SOCKS proxy. And bang! You&#8217;re proxying securely over an insecure network.</p>
+
+<p>Yeah, yeah, the best solution would be to have the target wordpress use SSL, but not every blog can have a dedicated IP.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/28/how-to-extract-uniq-ips-from-apache-via-grep-cut-and-uniq/">How to Extract Uniq IPs From Apache via Grep, Cut, and Uniq</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-28T00:00:00-04:00" pubdate data-updated="true">Apr 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Say you&#8217;d like to find out the IP addresses of lines in your apache access.log (or any log file with a similar format, really) that contain &#8220;Googlebot&#8221;:</p>
+
+<pre>grep 'Googlebot' access.log | cut -d' ' -f1 | sort | uniq</pre>
+
+
+<p>which finds the lines via grep, uses <strong>cut</strong> to extract the first field (space delimited), sorts the IP addresses and then <strong>uniq</strong>ifies them.</p>
+
+<p>Dirt simple, stupidly powerful.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/11/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/9/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/19/new-post/">A new octopress blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/">Wrap-up of my first week at thoughtbot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e17-sins-of-the-father/">S3:E17 - Sins of the Father</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e16-the-offspring/">S3:E16 - The Offspring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s318-allegiance/">S3:18 - Allegiance</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

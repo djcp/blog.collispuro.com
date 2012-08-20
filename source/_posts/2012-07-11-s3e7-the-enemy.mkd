@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S3:E7 - The Enemy"
+type: post
+---
+<blockquote>This one was the LaForge episode. I like LaForge a lot, so this was a good episode. The radiation was messing up the Romulan, and LaForge couldn't see any more because his, what is it called?, visor wasn't working. No, his connection with the visor was messed up. They had to work together to make a thing to find the orb thing the Enterprise sent down and to change it to signal. Pretty good one.</blockquote>

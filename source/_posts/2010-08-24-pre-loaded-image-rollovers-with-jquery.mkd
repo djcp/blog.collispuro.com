@@ -1,0 +1,42 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - javascript
+  - jquery
+title: "Pre-loaded Image Rollovers with jQuery"
+type: post
+---
+I despise implementing image rollovers, but this makes it almost tolerable.  Any <img> tag with a "hover" attribute referring to an image URL will have a rollover behavior attached to it. For bonus points, the rollover image will be pre-loaded, so there's no momentary delay the first time an on-state image is loaded.
+
+In your HTML source:
+
+[sourcecode language="html"]
+<img src="/images/button.gif" hover="/images/button_on.gif"><img src="/images/another_button.gif" hover="/images/another_button_on.gif">
+[/sourcecode]
+
+[sourcecode language="javascript"]
+jQuery(document).ready(function(){
+  jQuery('img[hover]').each(function(){
+    // Preload rollover
+    var imageEl = jQuery("<img alt="">");
+    imageEl.attr('src',jQuery(this).attr('hover'));
+
+    jQuery(this).hover(
+      function(){
+        // swap the image.
+        var hoverSrc = jQuery(this).attr('hover');
+        var regSrc = jQuery(this).attr('src');
+        jQuery(this).attr('src',hoverSrc);
+        jQuery(this).attr('hover',regSrc);
+      }
+    );
+  });
+});
+[/sourcecode]
+
+Thanks jQuery for being so awesome.

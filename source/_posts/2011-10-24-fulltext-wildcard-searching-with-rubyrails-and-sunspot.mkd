@@ -1,0 +1,53 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - lucene
+  - rails
+  - ruby
+  - solr
+  - testtag
+title: "fulltext wildcard searching with ruby/rails and sunspot"
+type: post
+---
+I love <a href="http://outoftime.github.com/sunspot/" title="Sunspot">Sunspot</a> for full-text searching in Rails apps, but it took me a while to figure out how to do left-bound wildcard searching in full-text indexed fields.
+
+So - if we're searching for "collis" in a set of fulltext indexed fields, in the default solr config supplied by sunspot you have to search for the entire word. To get "colli" or "coll" to return records with "collis" in the fulltext index, you just need to modify the solr config (in <strong>$RAILS_ROOT/solr/conf/schema.xml</strong>), changing:
+
+<pre>
+<fieldType name="text" class="solr.TextField" omitNorms="false">
+  <analyzer>
+    <tokenizer class="solr.StandardTokenizerFactory"/>
+    <filter class="solr.StandardFilterFactory"/>
+    <filter class="solr.LowerCaseFilterFactory"/>
+  </analyzer>
+</fieldType>
+</pre>
+
+to:
+
+<pre>
+<fieldType name="text" class="solr.TextField" omitNorms="false">
+  <analyzer type="index">
+    <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+    <filter class="solr.LowerCaseFilterFactory"/>
+    <filter class="solr.EdgeNGramFilterFactory" minGramSize="1" maxGramSize="50" side="front"/>
+  </analyzer>
+  <analyzer type="query">
+    <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+    <filter class="solr.LowerCaseFilterFactory"/>
+  </analyzer>
+</fieldType>
+</pre>
+
+which essentially makes the full text tokenizer create left-bound <a href="http://en.wikipedia.org/wiki/N-gram">n-grams</a> for indexed terms. This taught me:
+
+<ol>
+<li>Solr/lucene/sunspot rock, and</li>
+<li>I have more to learn about solr config because the schema.xml looks like it exposes some very powerful search juju.</li>
+</ol>
+
+Thanks to Arndt Lehmann's tip on <a href="http://railscasts.com/episodes/278-search-with-sunspot?view=comments">this</a> page.

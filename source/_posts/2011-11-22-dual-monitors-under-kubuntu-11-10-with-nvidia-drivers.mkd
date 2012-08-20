@@ -1,0 +1,26 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - kubuntu
+  - nvidia
+  - sysadmin
+  - ubuntu
+title: "Dual Monitor support under Kubuntu 11.10 with nvidia drivers"
+type: post
+---
+There was a pretty annoying regression in nvidia support under Kubuntu (and probably regular ole' Ubuntu) 11.10 - dual monitor support is busted. Ouch.
+
+Confusion abounds on how to fix this, but it seems all you need to do is:
+<ul>
+<li>uninstall <strong>nvidia-173</strong>
+</li>
+	<li>install <strong>nvidia-current</strong>
+</li>
+	<li>remove <strong>/etc/x11/xorg.conf</strong> to cause another one to be regenerated, and then</li>
+	<li>Reboot. You'll be using a newer driver and be able to configure twinview via <strong>nvidia-settings</strong> per the usual.</li>
+</ul>
+<div>You're just updating the nvidia driver, that's all. This just happens to be the easiest way.</div>

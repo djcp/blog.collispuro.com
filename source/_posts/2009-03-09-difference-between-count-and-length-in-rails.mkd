@@ -1,0 +1,22 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - rails
+title: "Difference between \"count\" and \"length\" in Rails."
+type: post
+---
+I made an interesting discovery the other day between how "count" and "length" function with an ActiveRecord model, one that can be exploited effectively to speed up an app, as long as you understand the consequences.
+<ul>
+<li>Invoking "count" on an array (or dependent relationship) will <strong>always</strong> hit the database, and do something similar to <strong>select count(id) as count_all from contacts</strong> every time you invoke it.</li>
+	<li>Invoking "length" on an array (or dependent relationship) will only hit the database once. If the relationship has already been populated (say by :include-ing the dependent objects in your Model.find method), the database won't get hit at all.</li>
+</ul>
+So - if you're OK not getting a count that's 100% accurate at the time of method invocation, "length" will do the right thing and run the necessary SQL statement the first time it's run. Otherwise, it'll give you the array count, which may be out of sync with the database.
+
+This can have significant performance benefits if you're iterating through many records and emitting counts of dependent objects. :include-ing the dependent objects and using "length" decreased the SQL expense of a page view 40 fold in one case.
+
+Once again, it's good to know your tools.

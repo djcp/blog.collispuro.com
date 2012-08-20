@@ -1,0 +1,18 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - hdd
+  - linux
+  - security
+title: "Single drive wipe protects data, research finds"
+type: post
+---
+Ha. <a href="http://www.securityfocus.com/brief/888">I knew it.</a>
+
+<code>shred -n1 /dev/sda2</code>
+
+should be more than sufficient to wipe your sda2 partition and make its data unrecoverable.

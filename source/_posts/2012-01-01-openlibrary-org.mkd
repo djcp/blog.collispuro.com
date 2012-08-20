@@ -1,0 +1,15 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - foss
+  - freedom
+  - git
+title: OpenLibrary.org
+type: post
+---
+A heads up- <a href="http://www.openlibrary.org">openlibrary.org</a> has an amazing aggregation of free books and a promising looking API, which you can find more info about in the <a href="http://openlibrary.org/developers">developer center</a>. It looks like there is some amazing work happening in their <a href="https://github.com/openlibrary">github account</a>.

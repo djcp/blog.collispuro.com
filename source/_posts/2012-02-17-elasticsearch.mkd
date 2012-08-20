@@ -1,0 +1,14 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - json
+  - lucene
+title: elasticsearch
+type: post
+---
+Note to self - <a href="http://www.elasticsearch.org/">elasticsearch</a> looks pretty great. I was introduced to it via <a href="http://bibserver.org/">BibServer</a> and I can already see a bunch of problems it would've solved for me.

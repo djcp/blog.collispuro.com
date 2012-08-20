@@ -1,0 +1,15 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - foss
+  - "web development"
+  - wordpress
+title: "My first accepted contribution to the WordPress core"
+type: post
+---
+Yay. It's pretty minor (a fix to the new WordPress XML-RPC api stuff) but it's <a href="http://wordpress.org/news/2012/06/green/">nice to see my name in the credits</a>.

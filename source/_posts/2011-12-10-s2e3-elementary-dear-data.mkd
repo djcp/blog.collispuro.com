@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S2:E3 - Elementary, Dear Data"
+type: post
+---
+<blockquote>Maybe some day they'll actually do the Sherlock Holmes program again on the holodeck.  I was weird that Data figured out all the mysteries immediately.  I feel bad for Geordi - he said he totally messed it up and made everything wrong.</blockquote>

@@ -1,0 +1,72 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - acer
+  - debian
+  - kubuntu
+  - linux
+  - timelinex
+  - ubuntu
+title: "Kubuntu 11.10 on the Acer Aspire Timelinex AS4830tg-6450"
+type: post
+---
+<strong>Synopsis:</strong> The info below should tell you most of what you need to get <a href="http://kubuntu.org">kubuntu 11.10</a> working on the <a href="http://us.acer.com/ac/en/US/content/model/LX.RGL02.119">Acer Aspire Timelinex AS4830-tg 6450</a>, which currently has an MSRP of $729 USD but can be found cheaper through some retailers. It's working great! I don't see why they wouldn't work for a normal <a href="http://ubuntu.com">ubuntu 11.10</a> install.  These instructions should be valid for similarly kitted Acer Timelinex laptops too, like the <span class="Apple-style-span" style="font-size: 14px; line-height: 22px;">AS3830TG-6424, the </span><span class="Apple-style-span" style="font-size: 14px; line-height: 22px;">AS5830TG-6402 and other models with optimus switchable graphics.</span>
+
+Fear not! It is easier to get this machine working than the length of my instructions would imply.
+<h2>Details</h2>
+I've gotten <a href="http://kubuntu.org">Kubuntu 11.10</a> working with pretty much everything that I care about, including the full power-saving capabilities of the hardware. I get more than 7 hours on the battery. Notes:
+<ul>
+<li>Download and write kubuntu 11.10 to a usb stick, instructions elsewhere. I'm using the 64bit flavor and it's wonderful.</li>
+	<li>
+<strong>HDD:</strong> Make some room on the hard drive for your linux install by shrinking the largest windows partition. I did this through windows, but whatever makes you happy. Leave the space unallocated, you'll partition it through the kubuntu install process.</li>
+	<li>
+<strong>BIOS updates:</strong> Reboot, going into the BIOS by pressing <strong>f2</strong> during the POST. Change the boot priority to use the USB device, or enable the "boot menu via <strong>f12</strong>" option that's in there.While you're in the BIOS, switch the graphics to "integrated." This will power down the nvidia GPU and lead to some pretty major power savings.Yeah, this kinda sucks, but switchable graphics through ironhide is just not there yet. I was able to get it working (for some values of "working") but it was VERY quirky to the point of being unusable.  Don't get me wrong, the ironhide/bumblebee folks have done some great work and I'm looking forward to full optimus support in the near future.This BIOS change means if you want to use the nvidia GPU under windows that you'll need to go into the BIOS during a reboot and change back to "switchable." That's a fine compromise as far as I'm concerned (98% of my time is in linux, I only use windows for games), and the fact that Acer makes this a BIOS option is great - my Asus 1215n didn't have this option so the nvidia GPU was always on.</li>
+	<li>
+<strong>Install!</strong> Boot to your USB stick. Your wifi and ethernet cards should be recognized without a problem. You should probably leave the 18gb and 100mb recovery partitions alone so you can factory-reset the machine easily should you decide to sell it later on. I created a 35gb <strong>/</strong> partition, 5 gb swap and 240gb <strong>/home</strong>, but go with what you like. After the installation is complete, you have a few more linux-level tweaks to implement.</li>
+	<li>
+<strong>kernel boot options: </strong>edit <strong>/etc/default/grub,</strong> and change GRUB_CMDLINE_LINUX_DEFAULT to be:
+<strong>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=force acpi_osi=Linux i915.i915_enable_rc6=1"</strong>
+This will light up a bunch of hotkeys and power management features. Update grub after making this change, via "sudo update-grub". Reboot. Thanks to <a href="http://www.linlap.com/wiki/acer+aspire+4830tg+timelinex">this page</a> for the boot options.</li>
+	<li>
+<strong>cpufreqd</strong> - install it. This will clock down your CPU according to different profiles and lead to <strong>major </strong>power savings.The default cpufreqd config needs tweaking, as it's really not optimized well for the full capabilities of the linux kernel/i5 hardware combo. I really, really like the "ondemand" governor as it means a cooler running system that'll use the full capabilities of your CPU when needed. I suggest changing every <strong>"policy="</strong> in <strong>/etc/cpufreqd.conf</strong> to "ondemand" and every <strong>"minfreq=" </strong>and <strong>"maxfreq="</strong> setting to 0% and 100% respectively.You can tweak cpufreqd.conf endlessly, but these minor changes make a HUGE difference with no noticeable impact on performance. Reboot the cpufreqd daemon after changing the config file, of course.</li>
+	<li>
+<strong>KDE changes:
+Effects:</strong>Go into "System Settings -> Desktop Effects -> Advanced" and switch the compositing type to "XRender". This will give you access to a significant number of effects that work pretty well under the intel integrated gpu.<strong>Nepomuk:</strong> Go into "System Settings -> Desktop Search" and disable Nepomuk (boo!). You may not need to do this, but I've found it's just too large a resource hog for me to keep it enabled. This is probably because I have a huge $HOME directory with a bajillion text files for my development projects along with three very large email accounts. Nepomuk just never seems to stop indexing and I definitely notice the load. Additionally, shutting down Nepomuk means that pulseaudio works better - I'm guessing because pulse isn't getting CPU/io starved because of nepomuk's endless indexing.</li>
+</ul>
+That's it! You'll have a blazingly fast linux laptop that'll run over 7 hours on the battery and that weighs less than 5 lbs. I bought mine for $729 at <a href="http://www.newegg.com">newegg.com</a> - this is a great value for a laptop that just oozes quality. If / when I start to feel performance constrained I plan on getting an intel 320 series SSD drive to replace the 5400rpm western digital it comes with.
+<h2>What's working</h2>
+<ul>
+<li>Most hotkeys</li>
+	<li>Powersaving: > 7 hours(!)</li>
+	<li>Sound, including speakers (some folks reported that as a problem). I have had sound lockups that're fixed by just suspending / awakening the laptop - but since I disabled nepomuk they've mostly gone away.</li>
+	<li>Card reader</li>
+	<li>DVD drive</li>
+	<li>Networking - wifi and ethernet</li>
+	<li>Suspend</li>
+	<li>Multitouch on the pointing device.</li>
+	<li>Fan speed - others reported that as a problem, I've not seen it.</li>
+	<li>Dual boot</li>
+	<li>webcam (trying opening the /dev/video0 capture device via vlc)</li>
+</ul>
+<h2>What isn't</h2>
+<ul>
+<li>Widi</li>
+	<li>Nvidia GPU acceleration under linux.</li>
+	<li>The windows key (probably just need to map it to something)</li>
+	<li>Hibernate - but who cares with working suspend and a pretty fast boot time?</li>
+</ul>
+<h2>What's not been tested</h2>
+<ul>
+<li>USB power-off charging</li>
+	<li>Microphone - internal or external</li>
+	<li>HDMI out (probably won't work, if it's like other optimus devices)</li>
+	<li><del>VGA out (probably will work, if it's like other optimus laptops)</del></li>
+</ul>
+<h2><strong>** UPDATE **</strong></h2>
+<ul>
+<li>VGA out works perfectly under the intel video drivers.</li>
+</ul>

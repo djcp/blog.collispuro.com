@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Play flac, ogg, anything from anywhere on your Pre with Ampache Mobile - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="I was looking for a way to play my music collection (which is primarily ogg and flac) from anywhere, preferably with some sort of automatic &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/2009/11/17/play-flac-ogg-anything-on-your-pre-from-anywhere-with-ampache/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Play Flac, Ogg, Anything From Anywhere on Your Pre With Ampache Mobile</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-17T00:00:00-05:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I was looking for a way to play my music collection (which is primarily ogg and flac) from anywhere, preferably with some sort of automatic transcoding feature. In the past I've just mounted my music collection via sshfs (more about that <a href="http://blogs.law.harvard.edu/djcp/2009/09/cool-stuff-you-can-do-with-ssh-and-fuse/">here</a>) and then played music with some heavyweight app like Amarok. This is fine, but flac files are too large to be streamed realistically.</p>
+
+<p>So - along came <a href="http://ampache.org/">Ampache</a> - an open-source PHP app that is just CHOCK full of features. Just crazy. It's got a responsive AJAX interface, creates many different types of playlists, can transcode on the fly to other formats / bitrates and was fairly easy to install. It's just awesome, and pretty much any music player can read an Ampache stream.</p>
+
+<p>THEN I discovered <a href="http://forums.precentral.net/homebrew-apps/200423-ampache-mobile.html">Ampache Mobile</a> (<a href="http://code.google.com/p/ampache-mobile/">google code page</a>) - a FOSS Palm Pre app that hooks into your Ampache instance via XML-RPC. Amazing! I get  flac/ogg files transcoded to 96kbps MP3 streams on-the-fly, allowing me to listen to all my music anywhere I have a Sprint network connection. The app is beautiful, functional, and has made my Pre even more indispensible than it was before.</p>
+
+<p>If you've got a Pre and a home server with even moderate upload speed, GET THIS WORKING. Now.</p>
+
+<p><strong>Edit: </strong> Corrected Ampache Mobile link. Thanks, bjgeiser!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-17T00:00:00-05:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2009/11/17/play-flac-ogg-anything-on-your-pre-from-anywhere-with-ampache/" data-via="" data-counturl="http://yoursite.com/blog/2009/11/17/play-flac-ogg-anything-on-your-pre-from-anywhere-with-ampache/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/09/29/cool-stuff-you-can-do-with-ssh-and-fuse/" title="Previous Post: Cool stuff you can do with ssh and fuse">&laquo; Cool stuff you can do with ssh and fuse</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/01/11/convert-mysql-database-from-latin1-to-utf8-the-right-way/" title="Next Post: Convert mysql database from latin1 to utf8 the RIGHT way">Convert mysql database from latin1 to utf8 the RIGHT way &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/19/new-post/">A new octopress blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/">Wrap-up of my first week at thoughtbot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e17-sins-of-the-father/">S3:E17 - Sins of the Father</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e16-the-offspring/">S3:E16 - The Offspring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s318-allegiance/">S3:18 - Allegiance</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

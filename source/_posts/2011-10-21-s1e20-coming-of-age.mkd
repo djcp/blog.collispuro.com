@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S1:E20 - Coming of Age"
+type: post
+---
+"Sort of boring, except for the test that Wesley was going through. His last test was weird, the last guy just got up and walked away.  It was cute that Remick wanted to be on the Enterprise after his investigation."

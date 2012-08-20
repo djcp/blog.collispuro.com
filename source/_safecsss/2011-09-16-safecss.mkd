@@ -1,0 +1,13 @@
+--- 
+categories: []
+comments: true
+layout: safecss
+published: true
+status: publish
+tags: []
+title: safecss
+type: safecss
+---
+h1,h2,h3 {
+text-shadow:#ccc 5px 5px 5px;
+}

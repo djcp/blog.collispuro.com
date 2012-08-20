@@ -1,0 +1,22 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - rails
+title: "Rails 2.2, postgres, and testing"
+type: post
+---
+If you're using <a href="http://www.postgresql.org">Postgresql</a> with Rails 2.2, your testing database user needs to be a "superuser" for your tests to run. <strong>This is not a good thing.</strong> It's the equivalent of running as root. But, if you've got a completely separate development/testing server it's better than not being able to test at all.
+
+If your postgres testing user isn't a superuser, you'll get errors like:
+<pre>ActiveRecord::StatementInvalid: PGError: ERROR:  permission \
+denied: "RI_ConstraintTrigger_17866" is a system trigger</pre>
+You can create a postgres superuser thusly:
+<pre>> su - postgres
+> psql template1
+> template1=# create user  <strong>your username</strong> superuser;</pre>
+Update the testing stanza of your config/database.yml and you should be good to go.

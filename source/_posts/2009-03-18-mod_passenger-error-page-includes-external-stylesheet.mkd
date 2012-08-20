@@ -1,0 +1,20 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - infosec
+  - rails
+title: "mod_passenger error page includes external stylesheet."
+type: post
+---
+No sir, I don't like it. Not at all.
+
+The default mod_passenger "this app wouldn't start" page includes an external CSS file:
+
+http://www.modrails.com/error_pages/1.0/error_page.css
+
+which is odd, considering there's a bunch of inline CSS. I guess it's to include the images. . . but it also amounts to disclosing something unintentionally. Yuck.

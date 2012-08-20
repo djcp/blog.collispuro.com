@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S2:E2 - Where Silence Has Lease"
+type: post
+---
+<blockquote>The blue-faced monkey was really annoying - he killed someone. He was going to kill half the crew just to see how many ways there was to die. He was like the being from <a title="S2:E1 – The Child" href="http://blogs.law.harvard.edu/djcp/2011/12/s2e1-the-child/">The Child</a> - he was curious but instead he was mean about it.</blockquote>

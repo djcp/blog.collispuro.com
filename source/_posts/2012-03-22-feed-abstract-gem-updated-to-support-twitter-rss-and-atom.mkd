@@ -1,0 +1,26 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - foss
+  - lucene
+  - rails
+  - redis
+  - ruby
+  - solr
+title: "feed-abstract gem updated to support twitter RSS and Atom"
+type: post
+---
+I updated my <a href="http://rubygems.org/gems/feed-abstract">feed-abstract gem</a> to support twitter RSS/Atom, in that it will automatically parse hashtags and turn them into RSS item subjects/categories. Huzzah! This is pretty fun, as it allows tweets to be aggregated into <a href="http://github.com/berkmancenter/taghub">TagTeam</a> seamlessly and they can be remixed, archived, and searched by tag.
+
+You can get at twitter RSS/Atom via URLs like:
+<pre><code>https://search.twitter.com/search.atom?q=<strong><em>url encoded hashtag</em></strong></code></pre>
+so:
+
+<a href="https://search.twitter.com/search.atom?q=%23rails">https://search.twitter.com/search.atom?q=%23rails</a>
+
+I'm sure there are more search parameters available too. If you want RSS, just change the ".atom" to ".rss".

@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tngwatchestng
+title: "S1:E18 - When the Bough Breaks"
+type: post
+---
+"Their transporter is a lot quicker. Are they going to destroy the power source? Wesley was brave. They must've been extremely smart even though their scientists forgot."

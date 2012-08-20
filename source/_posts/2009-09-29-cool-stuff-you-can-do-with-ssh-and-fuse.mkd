@@ -1,0 +1,20 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - shellscripting
+  - ssh
+title: "Cool stuff you can do with ssh and fuse"
+type: post
+---
+<a href="http://fuse.sourceforge.net/">fuse</a> over ssh rocks, as we all know.  It allows you to mount remote filesystems anywhere you reach with SCP or SSH.  But wait - there's more!
+<h2>Run commands on the filesystems of hosts you don't control</h2>
+I needed to use <a href="http://www.samba.org/rsync/">rsync</a> on a host I don't control (godaddy, in this case). So I used fuse to remotely mount the godaddy filesystem and then used rsync to do a local copy.
+<pre>sshfs -C godaddyuser@godaddyhostname.org:/var/chroot/home/content/38/382342342/html/ ~/godaddy/
+rsync -auvz --delete-excluded ~/godaddy/ ~/godaddy-copy/</pre>
+I also created a git repo on that remote godaddy fuse mount - I feel naked without source control.
+<pre>cd ~/godaddy/ && git init</pre>
+just like working directly on the machine - except slower because of the network overhead.

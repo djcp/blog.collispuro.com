@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Kubuntu 11.10 on the Acer Aspire Timelinex AS4830tg-6450 - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Synopsis: The info below should tell you most of what you need to get kubuntu 11.10 working on the Acer Aspire Timelinex AS4830-tg 6450, which &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/2011/11/12/kubuntu-11-10-on-the-acer-aspire-timelinex-4830tg-6450/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Kubuntu 11.10 on the Acer Aspire Timelinex AS4830tg-6450</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-12T00:00:00-05:00" pubdate data-updated="true">Nov 12<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><strong>Synopsis:</strong> The info below should tell you most of what you need to get <a href="http://kubuntu.org">kubuntu 11.10</a> working on the <a href="http://us.acer.com/ac/en/US/content/model/LX.RGL02.119">Acer Aspire Timelinex AS4830-tg 6450</a>, which currently has an MSRP of $729 USD but can be found cheaper through some retailers. It's working great! I don't see why they wouldn't work for a normal <a href="http://ubuntu.com">ubuntu 11.10</a> install.  These instructions should be valid for similarly kitted Acer Timelinex laptops too, like the <span class="Apple-style-span" style="font-size: 14px; line-height: 22px;">AS3830TG-6424, the </span><span class="Apple-style-span" style="font-size: 14px; line-height: 22px;">AS5830TG-6402 and other models with optimus switchable graphics.</span></p>
+
+<p>Fear not! It is easier to get this machine working than the length of my instructions would imply.</p>
+
+<h2>Details</h2>
+
+
+<p>I've gotten <a href="http://kubuntu.org">Kubuntu 11.10</a> working with pretty much everything that I care about, including the full power-saving capabilities of the hardware. I get more than 7 hours on the battery. Notes:</p>
+
+<ul>
+<li>Download and write kubuntu 11.10 to a usb stick, instructions elsewhere. I'm using the 64bit flavor and it's wonderful.</li>
+    <li>
+<strong>HDD:</strong> Make some room on the hard drive for your linux install by shrinking the largest windows partition. I did this through windows, but whatever makes you happy. Leave the space unallocated, you'll partition it through the kubuntu install process.</li>
+    <li>
+<strong>BIOS updates:</strong> Reboot, going into the BIOS by pressing <strong>f2</strong> during the POST. Change the boot priority to use the USB device, or enable the "boot menu via <strong>f12</strong>" option that's in there.While you're in the BIOS, switch the graphics to "integrated." This will power down the nvidia GPU and lead to some pretty major power savings.Yeah, this kinda sucks, but switchable graphics through ironhide is just not there yet. I was able to get it working (for some values of "working") but it was VERY quirky to the point of being unusable.  Don't get me wrong, the ironhide/bumblebee folks have done some great work and I'm looking forward to full optimus support in the near future.This BIOS change means if you want to use the nvidia GPU under windows that you'll need to go into the BIOS during a reboot and change back to "switchable." That's a fine compromise as far as I'm concerned (98% of my time is in linux, I only use windows for games), and the fact that Acer makes this a BIOS option is great - my Asus 1215n didn't have this option so the nvidia GPU was always on.</li>
+    <li>
+<strong>Install!</strong> Boot to your USB stick. Your wifi and ethernet cards should be recognized without a problem. You should probably leave the 18gb and 100mb recovery partitions alone so you can factory-reset the machine easily should you decide to sell it later on. I created a 35gb <strong>/</strong> partition, 5 gb swap and 240gb <strong>/home</strong>, but go with what you like. After the installation is complete, you have a few more linux-level tweaks to implement.</li>
+    <li>
+<strong>kernel boot options: </strong>edit <strong>/etc/default/grub,</strong> and change GRUB_CMDLINE_LINUX_DEFAULT to be:
+<strong>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=force acpi_osi=Linux i915.i915_enable_rc6=1"</strong>
+This will light up a bunch of hotkeys and power management features. Update grub after making this change, via "sudo update-grub". Reboot. Thanks to <a href="http://www.linlap.com/wiki/acer+aspire+4830tg+timelinex">this page</a> for the boot options.</li>
+    <li>
+<strong>cpufreqd</strong> - install it. This will clock down your CPU according to different profiles and lead to <strong>major </strong>power savings.The default cpufreqd config needs tweaking, as it's really not optimized well for the full capabilities of the linux kernel/i5 hardware combo. I really, really like the "ondemand" governor as it means a cooler running system that'll use the full capabilities of your CPU when needed. I suggest changing every <strong>"policy="</strong> in <strong>/etc/cpufreqd.conf</strong> to "ondemand" and every <strong>"minfreq=" </strong>and <strong>"maxfreq="</strong> setting to 0% and 100% respectively.You can tweak cpufreqd.conf endlessly, but these minor changes make a HUGE difference with no noticeable impact on performance. Reboot the cpufreqd daemon after changing the config file, of course.</li>
+    <li>
+<strong>KDE changes:
+Effects:</strong>Go into "System Settings -> Desktop Effects -> Advanced" and switch the compositing type to "XRender". This will give you access to a significant number of effects that work pretty well under the intel integrated gpu.<strong>Nepomuk:</strong> Go into "System Settings -> Desktop Search" and disable Nepomuk (boo!). You may not need to do this, but I've found it's just too large a resource hog for me to keep it enabled. This is probably because I have a huge $HOME directory with a bajillion text files for my development projects along with three very large email accounts. Nepomuk just never seems to stop indexing and I definitely notice the load. Additionally, shutting down Nepomuk means that pulseaudio works better - I'm guessing because pulse isn't getting CPU/io starved because of nepomuk's endless indexing.</li>
+</ul>
+
+
+<p>That's it! You'll have a blazingly fast linux laptop that'll run over 7 hours on the battery and that weighs less than 5 lbs. I bought mine for $729 at <a href="http://www.newegg.com">newegg.com</a> - this is a great value for a laptop that just oozes quality. If / when I start to feel performance constrained I plan on getting an intel 320 series SSD drive to replace the 5400rpm western digital it comes with.</p>
+
+<h2>What's working</h2>
+
+
+<ul>
+<li>Most hotkeys</li>
+    <li>Powersaving: > 7 hours(!)</li>
+    <li>Sound, including speakers (some folks reported that as a problem). I have had sound lockups that're fixed by just suspending / awakening the laptop - but since I disabled nepomuk they've mostly gone away.</li>
+    <li>Card reader</li>
+    <li>DVD drive</li>
+    <li>Networking - wifi and ethernet</li>
+    <li>Suspend</li>
+    <li>Multitouch on the pointing device.</li>
+    <li>Fan speed - others reported that as a problem, I've not seen it.</li>
+    <li>Dual boot</li>
+    <li>webcam (trying opening the /dev/video0 capture device via vlc)</li>
+</ul>
+
+
+<h2>What isn't</h2>
+
+
+<ul>
+<li>Widi</li>
+    <li>Nvidia GPU acceleration under linux.</li>
+    <li>The windows key (probably just need to map it to something)</li>
+    <li>Hibernate - but who cares with working suspend and a pretty fast boot time?</li>
+</ul>
+
+
+<h2>What's not been tested</h2>
+
+
+<ul>
+<li>USB power-off charging</li>
+    <li>Microphone - internal or external</li>
+    <li>HDMI out (probably won't work, if it's like other optimus devices)</li>
+    <li><del>VGA out (probably will work, if it's like other optimus laptops)</del></li>
+</ul>
+
+
+<h2><strong>** UPDATE **</strong></h2>
+
+
+<ul>
+<li>VGA out works perfectly under the intel video drivers.</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-12T00:00:00-05:00" pubdate data-updated="true">Nov 12<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2011/11/12/kubuntu-11-10-on-the-acer-aspire-timelinex-4830tg-6450/" data-via="" data-counturl="http://yoursite.com/blog/2011/11/12/kubuntu-11-10-on-the-acer-aspire-timelinex-4830tg-6450/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/11/10/s1e24-skin-of-evil/" title="Previous Post: S1:E24 - Skin of Evil">&laquo; S1:E24 - Skin of Evil</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/11/17/inferring-password-storage-security-through-maximum-password-length-requirements/" title="Next Post: Inferring password storage security through maximum password length requirements.">Inferring password storage security through maximum password length requirements. &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/19/new-post/">A new octopress blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/">Wrap-up of my first week at thoughtbot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e17-sins-of-the-father/">S3:E17 - Sins of the Father</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e16-the-offspring/">S3:E16 - The Offspring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s318-allegiance/">S3:18 - Allegiance</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

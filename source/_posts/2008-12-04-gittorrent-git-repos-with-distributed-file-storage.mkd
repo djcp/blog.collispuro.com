@@ -1,0 +1,18 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - code
+  - freedom
+  - git
+title: "GitTorrent - git repos with distributed file storage."
+type: post
+---
+<a href="http://advogato.org/article/994.html">My mind has been sufficiently blown.</a>
+
+Free software source code hosting with political resiliency baked right in - I guess you're already immune to political strife when your code is "free as in speech."  This strikes me as fitting the "trust but verify" adage quite nicely.
+
+The powers that be aren't going to mess with my perfectly legal free software, but <caveats status="applied">restricting my ability to code what I want isn't going to faze me when it's replicated across a bajillion nodes. </caveats>

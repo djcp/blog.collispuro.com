@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Figuring out what's behind a listening process without a program / pid. - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Say you're being a good sysadmin and you're checking out listeners on your machines: root@deathstar:~# netstat -pant | grep LISTEN
+tcp 0 0 127.0.0.1: &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/2011/10/13/figuring-out-whats-behind-a-listening-process-without-a-program-pid/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Figuring Out What's Behind a Listening Process Without a Program / Pid.</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-13T00:00:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Say you're being a good sysadmin and you're checking out listeners on your machines:</p>
+
+<pre>
+root@deathstar:~# netstat -pant | grep LISTEN
+tcp        0      0 127.0.0.1:873           0.0.0.0:*               LISTEN      3947/rsync      
+tcp        0      0 0.0.0.0:8649            0.0.0.0:*               LISTEN      3826/gmond      
+tcp        0      0 192.168.10.122:9102     0.0.0.0:*               LISTEN      4167/bacula-fd  
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      3229/portmap    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3468/sshd       
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      3930/master     
+tcp        0      0 0.0.0.0:44572           0.0.0.0:*               LISTEN      -               
+tcp        0      0 0.0.0.0:34271           0.0.0.0:*               LISTEN      3247/rpc.statd  
+tcp6       0      0 :::22                   :::*                    LISTEN      3468/sshd       
+</pre>
+
+
+<p>lolwut is listening on 44572 ?</p>
+
+<pre>
+ lsof -i -n -P | grep 44572
+</pre>
+
+
+<p>returns nothing! IT MUST BE A ROOTKIT!!eleventy!!!</p>
+
+<p>Wait - maybe portmapper has assigned it to a kernel-level server?</p>
+
+<pre>
+root@deathstar:~# pmap_dump
+    100000    2   tcp    111  portmapper
+    100000    2   udp    111  portmapper
+    100024    1   udp  44915  status
+    100024    1   tcp  34271  status
+    100021    1   tcp  44572  nlockmgr
+    100021    3   tcp  44572  nlockmgr
+    100021    4   tcp  44572  nlockmgr
+</pre>
+
+
+<p>Whew- it's nlockmgr, part of nfs file locking.</p>
+
+<p>So the moral of the story - just because netstat can't determine a program or pid doesn't mean you're in trouble. Check portmapper's assignments via pmap_dump first, as it might be innocuous.</p>
+
+<p>Apparently netstat can be made aware of portmapper assignments, but it doesn't appear it is aware of kernel level services - or - it just doesn't work for me.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-13T00:00:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2011/10/13/figuring-out-whats-behind-a-listening-process-without-a-program-pid/" data-via="" data-counturl="http://yoursite.com/blog/2011/10/13/figuring-out-whats-behind-a-listening-process-without-a-program-pid/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/09/23/s1e15-11001001/" title="Previous Post: S1:E15 - 11001001">&laquo; S1:E15 - 11001001</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/10/14/s1e17-too-short-a-season/" title="Next Post: S1:E17 - Too Short a Season">S1:E17 - Too Short a Season &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/19/new-post/">A new octopress blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/">Wrap-up of my first week at thoughtbot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e17-sins-of-the-father/">S3:E17 - Sins of the Father</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s3e16-the-offspring/">S3:E16 - The Offspring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/s318-allegiance/">S3:18 - Allegiance</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

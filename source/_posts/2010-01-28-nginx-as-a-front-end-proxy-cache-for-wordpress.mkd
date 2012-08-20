@@ -1,0 +1,41 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - nginx
+  - performance
+  - proxy-cache
+  - wordpress
+title: "Nginx as a front-end proxy cache for Wordpress"
+type: post
+---
+<img src="http://blogs.law.harvard.edu/djcp/files/2010/01/nginx-wp-love.jpg" alt="nginx-wp-love" title="nginx-wp-love" width="325" height="39" class="alignright size-full wp-image-80"><strong>The short version:</strong>
+
+We put an nginx caching proxy server in front of our wordpress mu install and sped it up dramatically - in some cases a thousandfold.  I've packaged up a plugin, along with installation instructions here - <a href="http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/">Wordpress Nginx proxy cache integrator</a>.
+
+<strong>The long version:</strong>
+
+Here at <a href="http://blogs.law.harvard.edu/">blogs.law.harvard.edu,</a> our wordpress mu was having problems. We get a fair amount of traffic (650k+ visits/month), - combine that with 'bots (good and bad) - and we were having serious problems. RSS feeds (we serve many from some <a href="http://blogs.law.harvard.edu/doc">pretty</a> <a href="http://blogs.law.harvard.edu/philg">prominent</a> <a href="http://blogs.law.harvard.edu/mesh">blogs.</a>) are expensive to create, files are gatewayed through PHP (on wpmu), and letting PHP dynamically create each page meant we were VERY close to maxing out our capacity - which we frequently did, bringing our blogs to a crawl.
+
+Wordpress - as lovely as it is - needs some kind of caching system in place once you start to see even moderate levels of traffic. There are <a href="http://wordpress.org/extend/plugins/wp-super-cache/">many</a>, <a href="http://wordpress.org/extend/plugins/w3-total-cache/">many</a> high quality and well-maintained options for caching - however, none of them really made me happy, or fit my definition of the "holy grail" of how a web app cache should work.  
+
+In my mind, caching should:
+<ul>
+<li>be high performance (digg and slashdot proof),</li>
+<li>light-weight,</li>
+<li>be structured to avoid invoking the heavy application frameworks it sits in front of. If you hit your app server (in this case, wordpress) - you've failed.</li>
+<li>be as unobtrusive as possible: caching should be a completely separate layer that lives above your web apps,</li>
+<li>have centralized and easily tweaked rules, and</li>
+<li>be flexible enough to work for any type (or amount) of traffic.</li>
+</ul>
+
+So I decided to put a proxy in front of wordpress to static cache as much as possible. ALL non-authenticated traffic is served directly from the nginx file cache, taking some requests (such as RSS feed generation) from 6 pages/second to 7000+ pages/second. Oof.  Nginx also handles logging and gzipping, leaving the heavier backend apaches to do what they do best: serve dynamic wordpress pages only when needed. 
+
+A frontend proxy also handles "lingering closes" - clients that fail to close a connection, or that take a long time to do so (say, for instance, because they're on a slow connection).  Taken to an extreme, lingering closes act as a <a href="http://hackaday.com/2009/06/17/slowloris-http-denial-of-service/">"slow loris"</a> attack, and without a frontend proxy your heavy apaches are left tied up. With a lightweight frontend proxy, you can handle more connections with less memory. Throw a cache in the mix and you can bypass the backend entirely, giving you absolutely SILLY scalability.
+
+On nginx - it's so efficient it's scary. I've never seen it use more than 10 to 15 meg of RAM and a blip of CPU, even under our heaviest load.  Our <a href="http://ganglia.sourceforge.net">ganglia</a> graphs don't lie: we halved our memory requirements, doubled our outgoing network throughput and completely leveled out our load. We have had basically no problems since we set this up.
+
+To make a long story short (too late), I packaged this up as a plugin along with detailed installation and configuration info. Check it out! Feedback appreciated: <a href="http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/">Wordpress Nginx proxy cache integrator</a>.

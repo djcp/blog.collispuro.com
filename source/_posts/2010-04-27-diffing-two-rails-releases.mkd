@@ -1,0 +1,23 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - git
+  - rails
+title: "Diff'ing two rails releases"
+type: post
+---
+This is so easy, and really is just basic git:
+
+<pre>
+<code>
+git clone http://github.com/rails/rails.git
+cd rails 
+git diff -r v2.3.2 v2.3.5
+</code>
+</pre>
+
+and you've got a diff of 2.3.2 versus 2.3.5. Enjoy!

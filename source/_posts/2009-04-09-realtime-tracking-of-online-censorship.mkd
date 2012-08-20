@@ -1,0 +1,11 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: []
+title: "Realtime tracking of online censorship."
+type: post
+---
+<code>[kml_flashembed movie="http://vimeo.com/moogaloop.swf?clip_id=3970262&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1" width="400" height="319" wmode="transparent" /]</code>

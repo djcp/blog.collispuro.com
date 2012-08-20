@@ -1,0 +1,25 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - multisite
+  - "web development"
+  - wordpress
+title: "How to move a wordpress multisite to a new \"folder\""
+type: post
+---
+Moving a wordpress multisite (a SINGLE site, not an entire install) to a new subfolder (not really a folder as it's virtual, but whatever) is not hard, but it's also not as easy as it should be. Here are the steps I took:
+<ol>
+<li>Change the site path from the Network Admin backend, and be sure to have it update "siteurl" and "home". Make a note of the siteid while you're here, which you can deduce from the "id=" parameter in the URL.</li>
+	<li>Regenerate the permalinks from the "Settings -> Permalinks" menu - I just temporarily switch the permalink structure to something else and right back again to the original settings - there's probably a more elegant way. If you're using a custom structure, be sure to note it before you change as it won't be retained in the text field.</li>
+	<li>Fix all the links inside the content - I just used a mysql "update", like this:
+<strong>update wp_<your multisite blog id>_posts set post_content = replace(post_content,'/oldpath/','/newpath/');
+</strong>For bonus points, you can create a backup as a temporary table before the replace. Be aware this backup table will go away after you terminate your mysql connection.
+<strong>create temporary table wp_<your multisite blog id>_posts_tmp select * from wp_<your multisite blog id>_posts;</strong>
+This should fix all embedded media and page links - but you'll still need to test, obviously.</li>
+	<li>Clear your object / apc caches by restarting apache and doing whatever else you need to clear your object cache backend. Since we're directly editing mysql tables, the object cache doesn't get the clues it needs to decache stale values and you can get weird issues. If you've got a frontend page cache, clear that too.</li>
+</ol>
+These steps have worked fine here, but it's a bit more manual than I had hoped.

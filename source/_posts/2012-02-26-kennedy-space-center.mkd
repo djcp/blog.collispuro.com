@@ -1,0 +1,16 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - tech
+title: "Kennedy Space Center"
+type: post
+---
+We swung down to Cape Canaveral and the <a href="http://www.nasa.gov/centers/kennedy/home/index.html">Kennedy Space Center</a> over February break - it was pretty amazing.
+
+Photos <a href="https://www.facebook.com/media/set/?set=a.10150586150911705.380637.631896704&type=3&l=5bf1dac2d9">here</a>, a sample below from the Rocket Garden:
+
+<img class="aligncenter" src="https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-snc7/428613_10150590450481705_631896704_9168716_73501256_n.jpg" alt="" width="960" height="637">

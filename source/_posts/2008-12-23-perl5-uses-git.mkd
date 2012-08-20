@@ -1,0 +1,12 @@
+--- 
+categories: []
+comments: true
+layout: post
+published: true
+status: publish
+tags: 
+  - git
+title: "Perl5 now uses git."
+type: post
+---
+<a href="http://use.perl.org/articles/08/12/22/0830205.shtml" target="_blank">Perl5 now uses git for source control</a>, and the complete commit history from the development of Perl 5 was ported too. That had to be a ton of work. Congrats!
