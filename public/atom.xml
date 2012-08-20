@@ -4,7 +4,7 @@
   <title><![CDATA[Dan Collis-Puro]]></title>
   <link href="http://cpblog.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://cpblog.herokuapp.com/"/>
-  <updated>2012-08-19T22:53:23-04:00</updated>
+  <updated>2012-08-19T23:23:07-04:00</updated>
   <id>http://cpblog.herokuapp.com/</id>
   <author>
     <name><![CDATA[djcp]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[A new octopress blog]]></title>
-    <link href="http://cpblog.herokuapp.com/blog/2012/08/19/new-post/"/>
-    <updated>2012-08-19T22:24:00-04:00</updated>
-    <id>http://cpblog.herokuapp.com/blog/2012/08/19/new-post</id>
-    <content type="html"><![CDATA[<p>How droll. A new octopress blog published to heroku.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wrap-up of my first week at thoughtbot]]></title>
@@ -267,6 +258,16 @@
     <updated>2012-07-03T00:00:00-04:00</updated>
     <id>http://cpblog.herokuapp.com/blog/2012/07/03/s3e2-the-ensigns-of-command</id>
     <content type="html"><![CDATA[<blockquote>This one was really weird. The Shelliac wanted the human colony to get off and there was a stubborn human guy that wouldn&#8217;t leave the planet. The Shelliac were going to destroy them but they finally went away. Data was trying to persuade them and he made a -~*girlfriend*~-. I like this episode a lot, because of the girl. She was really smart and cool, and Data made a -~*girlfriend*~-.</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[S3:E1 - Evolution]]></title>
+    <link href="http://cpblog.herokuapp.com/blog/2012/07/03/s3e1-evolution/"/>
+    <updated>2012-07-03T00:00:00-04:00</updated>
+    <id>http://cpblog.herokuapp.com/blog/2012/07/03/s3e1-evolution</id>
+    <content type="html"><![CDATA[<blockquote>I don&#8217;t remember this one well&#8230; Wait, nanites like blowing up the ship and messing with everybody. Data figures out a way to talk to them and they slowly start evolving so that they go inside of Data. They talk through Data. That&#8217;s it. Crusher&#8217;s back!</blockquote>
 
 ]]></content>
   </entry>
