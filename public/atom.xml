@@ -4,7 +4,7 @@
   <title><![CDATA[Dan Collis-Puro]]></title>
   <link href="http://cpblog.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://cpblog.herokuapp.com/"/>
-  <updated>2012-08-24T13:45:27-04:00</updated>
+  <updated>2012-08-27T10:01:23-04:00</updated>
   <id>http://cpblog.herokuapp.com/</id>
   <author>
     <name><![CDATA[djcp]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to get good repair service from SprintPCS]]></title>
+    <link href="http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/"/>
+    <updated>2012-08-27T09:48:00-04:00</updated>
+    <id>http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint</id>
+    <content type="html"><![CDATA[<p>Don&#8217;t go to a non-corporate store.  The resellers just don&#8217;t seem to care about customers as much as the employees at the corporate stores.</p>
+
+<p>I have been lied to (directly!), gotten repeated lame excuses (You JUST missed our tech!) and generally had clueless service.  It&#8217;s farther and much more annoying to get to a corporate store for me, but the time and frustration saved is worth it. Lessons learned.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wrap-up of my first week at thoughtbot]]></title>
