@@ -47,3 +47,7 @@ I figured I would give osx a try, not wanting to be a pain and figuring there ar
 I'm glad I had a chance to immerse myself in osx. I don't feel it impeded my productivity significantly and I understand better now why other developers like it.
 
 It's not for me, though. I will be happy to be back on linux.  Developers afraid that linux is limited or difficult - you might be surprised.  The BS quotient seems about the same, honestly: but linux gives you a solid dev environment with a side of freedom and a lot more flexibility to boot.
+
+**Update, 9/10 8:35am :**
+
+Thanks for pointing out spaces, and the alternative ways to right-click. Helpful, though not key elements of why I'm switching back.
