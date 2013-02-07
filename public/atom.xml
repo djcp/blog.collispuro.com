@@ -4,7 +4,7 @@
   <title><![CDATA[Dan Collis-Puro]]></title>
   <link href="http://cpblog.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://cpblog.herokuapp.com/"/>
-  <updated>2013-02-06T20:03:04-05:00</updated>
+  <updated>2013-02-06T20:59:31-05:00</updated>
   <id>http://cpblog.herokuapp.com/</id>
   <author>
     <name><![CDATA[djcp]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[@ficklehand - A twitter 'bot to help you make meaningless decisions]]></title>
+    <link href="http://cpblog.herokuapp.com/blog/2013/02/06/at-ficklehand-a-twitter-bot-to-help-you-make-meaningless-decisions/"/>
+    <updated>2013-02-06T20:07:00-05:00</updated>
+    <id>http://cpblog.herokuapp.com/blog/2013/02/06/at-ficklehand-a-twitter-bot-to-help-you-make-meaningless-decisions</id>
+    <content type="html"><![CDATA[<p>How many times are you faced with fundamentally meaningless, but &#8220;difficult&#8221; to
+make decisions? Classic examples include choosing what to eat for lunch,
+which book to start reading or what movie to see.</p>
+
+<p>Inspired by <a href="http://www.freakonomics.com/2013/01/31/would-you-let-a-coin-toss-decide-your-future-a-new-freakonomics-radio-podcast-3/">this Freaknomics podcast</a> and conversations around the <a href="http://www.thoughtbot.com">thoughtbot</a> office, I&#8217;ve written a twitter &#8216;bot to absorb some of that <a href="http://en.wikipedia.org/wiki/Decision_fatigue">decision fatigue</a> for you.</p>
+
+<p>Tweet @ficklehand a tweet that contains choices separated by &#8220;or&#8221; or the pipe character (the &#8220;|&#8221; on your keyboard, for non-programmers). @ficklehand (the &#8220;fickle hand of fate&#8221;) will decide and reply to your tweet.</p>
+
+<p>Example:</p>
+
+<blockquote class="twitter-tweet"><p>@<a href="https://twitter.com/djcp">djcp</a> I decide: salad</p>&mdash; ficklehand (@ficklehand) <a href="https://twitter.com/ficklehand/status/298836653810786304">February 5, 2013</a></blockquote>
+
+
+<script async src="http://cpblog.herokuapp.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to fix linecache19 install problems on ubuntu]]></title>
