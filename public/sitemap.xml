@@ -2,486 +2,496 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://yoursite.com/blog/2008/12/04/gittorrent-git-repos-with-distributed-file-storage/
+            http://cpblog.herokuapp.com/blog/2008/12/04/gittorrent-git-repos-with-distributed-file-storage/
         </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2008/12/11/public-radio-fundraising-redux/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2008/12/11/public-radio-fundraising-redux/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2008/12/23/perl5-uses-git/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2008/12/23/perl5-uses-git/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2009/01/14/rails-22-postgres-and-testing/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2009/01/14/rails-22-postgres-and-testing/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2009/01/19/single-drive-wipe-protects-data-research-finds/
+            http://cpblog.herokuapp.com/blog/2009/01/19/single-drive-wipe-protects-data-research-finds/
         </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2009/02/10/railsvim/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2009/02/10/railsvim/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2009/03/09/difference-between-count-and-length-in-rails/
-        </loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2009/03/18/mod_passenger-error-page-includes-external-stylesheet/
-        </loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2009/04/09/realtime-tracking-of-online-censorship/</loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2009/04/28/how-to-extract-uniq-ips-from-apache-via-grep-cut-and-uniq/
+            http://cpblog.herokuapp.com/blog/2009/03/09/difference-between-count-and-length-in-rails/
         </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2009/05/27/secure-http-connections-over-untrusted-networks/
-        </loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2009/07/14/why-i-use-the-gpl-by-zed-shaw/</loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2009/09/17/chromium-incognito-browsing-its-not-just-for-porn/
-        </loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2009/09/29/cool-stuff-you-can-do-with-ssh-and-fuse/</loc>
-        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2009/11/17/play-flac-ogg-anything-on-your-pre-from-anywhere-with-ampache/
+            http://cpblog.herokuapp.com/blog/2009/03/18/mod_passenger-error-page-includes-external-stylesheet/
         </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2010/01/11/convert-mysql-database-from-latin1-to-utf8-the-right-way/
+            http://cpblog.herokuapp.com/blog/2009/04/09/realtime-tracking-of-online-censorship/
         </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2010/01/28/nginx-as-a-front-end-proxy-cache-for-wordpress/
+            http://cpblog.herokuapp.com/blog/2009/04/28/how-to-extract-uniq-ips-from-apache-via-grep-cut-and-uniq/
         </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2010/03/27/a-simple-bash-password-safe/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2009/05/27/secure-http-connections-over-untrusted-networks/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2010/04/27/diffing-two-rails-releases/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2009/07/14/why-i-use-the-gpl-by-zed-shaw/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2010/08/24/pre-loaded-image-rollovers-with-jquery/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2009/09/17/chromium-incognito-browsing-its-not-just-for-porn/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/02/09/diffing-wordpress-releases/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2009/09/29/cool-stuff-you-can-do-with-ssh-and-fuse/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/02/28/deploying-debian-squeeze-on-slicehost/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2009/11/17/play-flac-ogg-anything-on-your-pre-from-anywhere-with-ampache/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/03/04/spam-software-gone-awry/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2010/01/11/convert-mysql-database-from-latin1-to-utf8-the-right-way/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/05/10/bye-bye-ubuntu-hello-debian/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2010/01/28/nginx-as-a-front-end-proxy-cache-for-wordpress/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/07/29/s1e1-encounter-at-farpoint/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2010/03/27/a-simple-bash-password-safe/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/07/29/s1e2-the-naked-now/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2010/04/27/diffing-two-rails-releases/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/07/29/s1e3-code-of-honor/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2010/08/24/pre-loaded-image-rollovers-with-jquery/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/07/29/s1e4-the-last-outpost/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/02/09/diffing-wordpress-releases/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/07/29/s1e5-where-no-one-has-gone-before/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2011/02/28/deploying-debian-squeeze-on-slicehost/
+        </loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/07/29/tng-watches-tng/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/03/04/spam-software-gone-awry/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/08/01/s1e6-lonely-among-us/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/05/10/bye-bye-ubuntu-hello-debian/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/08/01/s1e7-justice/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/07/29/s1e1-encounter-at-farpoint/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/08/09/s1e8-the-battle/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/07/29/s1e2-the-naked-now/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/09/02/s1e10-hide-and-q/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/07/29/s1e3-code-of-honor/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/09/10/s1e11-haven/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/07/29/s1e4-the-last-outpost/</loc>
         <lastmod>2012-08-19T22:36:45-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/09/17/s1e12-the-big-goodbye/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/07/29/s1e5-where-no-one-has-gone-before/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/07/29/tng-watches-tng/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/08/01/s1e6-lonely-among-us/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/08/01/s1e7-justice/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/08/09/s1e8-the-battle/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/09/02/s1e10-hide-and-q/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/09/10/s1e11-haven/</loc>
+        <lastmod>2012-08-19T22:36:45-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/09/17/s1e12-the-big-goodbye/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/09/17/s1e13-datalore/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/09/17/s1e13-datalore/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/09/23/s1e14-angel-one/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/09/23/s1e14-angel-one/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/09/23/s1e15-11001001/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/09/23/s1e15-11001001/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2011/10/13/figuring-out-whats-behind-a-listening-process-without-a-program-pid/
+            http://cpblog.herokuapp.com/blog/2011/10/13/figuring-out-whats-behind-a-listening-process-without-a-program-pid/
         </loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/10/14/s1e17-too-short-a-season/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/10/14/s1e17-too-short-a-season/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/10/14/s1e18-when-the-bough-breaks/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/10/14/s1e18-when-the-bough-breaks/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/10/21/s1e19-home-soil/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/10/21/s1e19-home-soil/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/10/21/s1e20-coming-of-age/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/10/21/s1e20-coming-of-age/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2011/10/24/fulltext-wildcard-searching-with-rubyrails-and-sunspot/
+            http://cpblog.herokuapp.com/blog/2011/10/24/fulltext-wildcard-searching-with-rubyrails-and-sunspot/
         </loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/11/05/s1e21-heart-of-glory/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/05/s1e21-heart-of-glory/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/11/05/s1e22-the-arsenal-of-freedom/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/05/s1e22-the-arsenal-of-freedom/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/11/10/s1e23-symbiosis/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/10/s1e23-symbiosis/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2011/11/10/s1e24-skin-of-evil/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2011/11/12/kubuntu-11-10-on-the-acer-aspire-timelinex-4830tg-6450/
-        </loc>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/10/s1e24-skin-of-evil/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2011/11/17/inferring-password-storage-security-through-maximum-password-length-requirements/
-        </loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/11/19/s1e25-well-always-have-paris/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/11/20/s1e26-conspiracy/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/11/20/s1e27-the-neutral-zone/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2011/11/22/dual-monitors-under-kubuntu-11-10-with-nvidia-drivers/
-        </loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/11/29/yacy-a-p2p-search-engine/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/12/10/s2e1-the-child/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/12/10/s2e2-where-silence-has-lease/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/12/10/s2e3-elementary-dear-data/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/12/21/s2e4-the-outrageous-okona/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2011/12/21/s2e5-loud-as-a-whisper/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/01/01/openlibrary-org/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2012/01/21/the-scientific-american-cyclopedia-of-formulas/
-        </loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/01/27/s2e6-the-schizoid-man/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/01/27/s2e7-unnatural-selection/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/01/27/s2e8-a-matter-of-honor/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/01/28/openwrt-love/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/01/28/s2e9-the-measure-of-a-man/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/02/10/s2e10-the-dauphin/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/02/10/s2e11-contagion/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/02/17/elasticsearch/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/02/26/kennedy-space-center/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/03/04/tagteam-close-to-1-0/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://yoursite.com/blog/2012/03/22/feed-abstract-gem-updated-to-support-twitter-rss-and-atom/
+            http://cpblog.herokuapp.com/blog/2011/11/12/kubuntu-11-10-on-the-acer-aspire-timelinex-4830tg-6450/
         </loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2012/03/29/how-to-move-a-wordpress-multisite-to-a-new-folder/
+            http://cpblog.herokuapp.com/blog/2011/11/17/inferring-password-storage-security-through-maximum-password-length-requirements/
+        </loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/19/s1e25-well-always-have-paris/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/20/s1e26-conspiracy/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/20/s1e27-the-neutral-zone/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2011/11/22/dual-monitors-under-kubuntu-11-10-with-nvidia-drivers/
+        </loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/11/29/yacy-a-p2p-search-engine/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/12/10/s2e1-the-child/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/12/10/s2e2-where-silence-has-lease/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/12/10/s2e3-elementary-dear-data/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/12/21/s2e4-the-outrageous-okona/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2011/12/21/s2e5-loud-as-a-whisper/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/01/01/openlibrary-org/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2012/01/21/the-scientific-american-cyclopedia-of-formulas/
+        </loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/01/27/s2e6-the-schizoid-man/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/01/27/s2e7-unnatural-selection/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/01/27/s2e8-a-matter-of-honor/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/01/28/openwrt-love/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/01/28/s2e9-the-measure-of-a-man/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/02/10/s2e10-the-dauphin/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/02/10/s2e11-contagion/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/02/17/elasticsearch/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/02/26/kennedy-space-center/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/03/04/tagteam-close-to-1-0/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2012/03/22/feed-abstract-gem-updated-to-support-twitter-rss-and-atom/
         </loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2012/05/04/auto-unlock-bs-the-most-obnoxious-thing-i-have-seen-in-my-life/
+            http://cpblog.herokuapp.com/blog/2012/03/29/how-to-move-a-wordpress-multisite-to-a-new-folder/
         </loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/02/s2e12-the-royale/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/02/s2e13-times-squared/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/02/s2e14-the-icarus-factor/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/02/s2e15-pen-pals/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/02/s2e16-q-who/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/02/s2e17-samaritan-snare/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/09/s2e18-up-the-long-ladder/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/09/s2e19-manhunt/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/09/s2e20-the-emissary/</loc>
-        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/2012/06/09/s2e21-peak-performance/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://yoursite.com/blog/2012/06/14/my-first-accepted-contribution-to-the-wordpress-core/
+            http://cpblog.herokuapp.com/blog/2012/05/04/auto-unlock-bs-the-most-obnoxious-thing-i-have-seen-in-my-life/
         </loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/03/s2e22-shades-of-gray/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/02/s2e12-the-royale/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/03/s3e1-evolution/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/02/s2e13-times-squared/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/03/s3e2-the-ensigns-of-command/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/02/s2e14-the-icarus-factor/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/03/s3e3-the-survivors/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/02/s2e15-pen-pals/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/03/s3e4-who-watches-the-watchers/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/02/s2e16-q-who/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/03/s3e5-the-bonding/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/02/s2e17-samaritan-snare/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e10-the-defector/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/09/s2e18-up-the-long-ladder/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e11-the-hunted/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/09/s2e19-manhunt/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e12-the-high-ground/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/09/s2e20-the-emissary/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e13-deja-q/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/06/09/s2e21-peak-performance/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e14-a-matter-of-perception/</loc>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2012/06/14/my-first-accepted-contribution-to-the-wordpress-core/
+        </loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e15-yesterdays-enterprise/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/03/s2e22-shades-of-gray/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e6-booby-trap/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/03/s3e1-evolution/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e7-the-enemy/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/03/s3e2-the-ensigns-of-command/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e8-the-price/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/03/s3e3-the-survivors/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/11/s3e9-the-vengeance-factor/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/03/s3e4-who-watches-the-watchers/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/29/google-nexus-7-16gb-mini-review/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/03/s3e5-the-bonding/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/30/s318-allegiance/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e10-the-defector/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/30/s3e16-the-offspring/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e11-the-hunted/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/07/30/s3e17-sins-of-the-father/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e12-the-high-ground/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e13-deja-q/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/2012/08/19/new-post/</loc>
-        <lastmod>2012-08-19T22:25:48-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e14-a-matter-of-perception/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/</loc>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e15-yesterdays-enterprise/</loc>
         <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e6-booby-trap/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e7-the-enemy/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e8-the-price/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/11/s3e9-the-vengeance-factor/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/29/google-nexus-7-16gb-mini-review/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/30/s318-allegiance/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/30/s3e16-the-offspring/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/07/30/s3e17-sins-of-the-father/</loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://cpblog.herokuapp.com/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/
+        </loc>
+        <lastmod>2012-08-19T22:36:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/2012/08/19/new-post/</loc>
+        <lastmod>2012-08-19T22:53:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/blog/archives/</loc>
+        <lastmod>2012-08-19T22:53:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cpblog.herokuapp.com/</loc>
+        <lastmod>2012-08-19T22:53:15-04:00</lastmod>
     </url>
 </urlset>
