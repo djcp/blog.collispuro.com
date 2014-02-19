@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to get good repair service from SprintPCS - Dan Collis-Puro</title>
+  <title>Compile pov-ray on debian jessie - Dan Collis-Puro</title>
   <meta name="author" content="djcp">
 
   
-  <meta name="description" content="Don&rsquo;t go to a non-corporate store. The resellers just don&rsquo;t seem to care about customers as much as the employees at the corporate stores &hellip;">
+  <meta name="description" content="Man I&rsquo;m terrible at keeping this blog up to date. Anyway &ndash; I&rsquo;ve decided to play
+around with the Persistence of Vision
+raytracer &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/">
+  <link rel="canonical" href="http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">How to Get Good Repair Service From SprintPCS</h1>
+      <h1 class="entry-title">Compile Pov-ray on Debian Jessie</h1>
     
     
       <p class="meta">
@@ -96,16 +98,42 @@
   
 
 
-<time datetime="2012-08-27T09:48:00-04:00" pubdate data-updated="true">Aug 27<span>th</span>, 2012</time>
+<time datetime="2014-02-18T20:08:43-05:00" pubdate data-updated="true">Feb 18<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Don&rsquo;t go to a non-corporate store.  The resellers just don&rsquo;t seem to care about customers as much as the employees at the corporate stores.</p>
+<div class="entry-content"><p>Man I&rsquo;m terrible at keeping this blog up to date. Anyway &ndash; I&rsquo;ve decided to play
+around with <a href="http://www.povray.org">the Persistence of Vision</a>
+raytracer again (aka &ldquo;pov-ray&rdquo;). It&rsquo;s a pretty old but capable raytracer.
+It&rsquo;s got a fairly easy to understand scene description language that gives you
+some major power, and I&rsquo;d like to think I&rsquo;ll be able to auto-generate some
+interesting stuff via ruby &ndash; we&rsquo;ll see.</p>
 
-<p>I have been lied to (directly!), gotten repeated lame excuses (You JUST missed our tech!) and generally had clueless service.  It&rsquo;s farther and much more annoying to get to a corporate store for me, but the time and frustration saved is worth it. Lessons learned.</p>
+<p>Unfortunately, it&rsquo;s been removed from the debian repos, so you&rsquo;re left to get
+it installed yourself. Here&rsquo;s how I did it on debian testing (currently
+&ldquo;jessie&rdquo;):</p>
+
+<pre><code>sudo aptitude install build-essential libboost-dev libboost-thread-dev zlib1g-dev libpng12-dev libjpeg8-dev libtiff5-dev libopenexr-dev
+git clone https://github.com/POV-Ray/povray
+cd povray
+git co 3.7-stable
+# Now we follow the unix/install.txt instructions, sorta.
+cd unix
+#Need to fix prebuild.sh for the newer version of automake in jessie
+sed 's/automake --w/automake --add-missing --w/g' -i prebuild.sh
+cd ..
+./configure --prefix ~/bin/povray COMPILED_BY='dan@collispuro.cnet' LIBS="-lboost_system -lboost_thread"
+make
+make check
+make install
+</code></pre>
+
+<p>and it&rsquo;ll install into <code>~/bin/povray/</code>.</p>
+
+<p>Thanks to <a href="http://news.povray.org/povray.unix/thread/%3Cweb.52810591323e085d7a3e03fe0@news.povray.org%3E/">this post</a> for getting me over the automake incompatibility confusion, where an empty <code>Makefile.in</code> was being generated while trying to <code>./configure</code>.</p>
 </div>
 
 
@@ -128,7 +156,7 @@
   
 
 
-<time datetime="2012-08-27T09:48:00-04:00" pubdate data-updated="true">Aug 27<span>th</span>, 2012</time>
+<time datetime="2014-02-18T20:08:43-05:00" pubdate data-updated="true">Feb 18<span>th</span>, 2014</time>
       
 
 
@@ -136,7 +164,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/" data-via="djcp" data-counturl="http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie/" data-via="djcp" data-counturl="http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -147,10 +175,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/18/wrap-up-of-my-first-week-at-thoughtbot/" title="Previous Post: Wrap-up of my first week at thoughtbot">&laquo; Wrap-up of my first week at thoughtbot</a>
+        <a class="basic-alignment left" href="/blog/2013/02/06/at-ficklehand-a-twitter-bot-to-help-you-make-meaningless-decisions/" title="Previous Post: @ficklehand - A twitter 'bot to help you make meaningless decisions">&laquo; @ficklehand - A twitter 'bot to help you make meaningless decisions</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/09/switching-back-to-linux/" title="Next Post: Switching back to Linux from osx">Switching back to Linux from osx &raquo;</a>
       
     </p>
   </footer>
@@ -245,8 +271,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/';
-        var disqus_url = 'http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/';
+        var disqus_identifier = 'http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie/';
+        var disqus_url = 'http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie/';
         var disqus_script = 'embed.js';
       
     (function () {

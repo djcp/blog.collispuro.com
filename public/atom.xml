@@ -4,7 +4,7 @@
   <title><![CDATA[Dan Collis-Puro]]></title>
   <link href="http://cpblog.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://cpblog.herokuapp.com/"/>
-  <updated>2013-02-06T20:59:31-05:00</updated>
+  <updated>2014-02-18T20:24:58-05:00</updated>
   <id>http://cpblog.herokuapp.com/</id>
   <author>
     <name><![CDATA[djcp]]></name>
@@ -14,17 +14,54 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Compile pov-ray on debian jessie]]></title>
+    <link href="http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie/"/>
+    <updated>2014-02-18T20:08:43-05:00</updated>
+    <id>http://cpblog.herokuapp.com/blog/2014/02/18/compile-pov-ray-on-debian-jessie</id>
+    <content type="html"><![CDATA[<p>Man I&rsquo;m terrible at keeping this blog up to date. Anyway &ndash; I&rsquo;ve decided to play
+around with <a href="http://www.povray.org">the Persistence of Vision</a>
+raytracer again (aka &ldquo;pov-ray&rdquo;). It&rsquo;s a pretty old but capable raytracer.
+It&rsquo;s got a fairly easy to understand scene description language that gives you
+some major power, and I&rsquo;d like to think I&rsquo;ll be able to auto-generate some
+interesting stuff via ruby &ndash; we&rsquo;ll see.</p>
+
+<p>Unfortunately, it&rsquo;s been removed from the debian repos, so you&rsquo;re left to get
+it installed yourself. Here&rsquo;s how I did it on debian testing (currently
+&ldquo;jessie&rdquo;):</p>
+
+<pre><code>sudo aptitude install build-essential libboost-dev libboost-thread-dev zlib1g-dev libpng12-dev libjpeg8-dev libtiff5-dev libopenexr-dev
+git clone https://github.com/POV-Ray/povray
+cd povray
+git co 3.7-stable
+# Now we follow the unix/install.txt instructions, sorta.
+cd unix
+#Need to fix prebuild.sh for the newer version of automake in jessie
+sed 's/automake --w/automake --add-missing --w/g' -i prebuild.sh
+cd ..
+./configure --prefix ~/bin/povray COMPILED_BY='dan@collispuro.cnet' LIBS="-lboost_system -lboost_thread"
+make
+make check
+make install
+</code></pre>
+
+<p>and it&rsquo;ll install into <code>~/bin/povray/</code>.</p>
+
+<p>Thanks to <a href="http://news.povray.org/povray.unix/thread/%3Cweb.52810591323e085d7a3e03fe0@news.povray.org%3E/">this post</a> for getting me over the automake incompatibility confusion, where an empty <code>Makefile.in</code> was being generated while trying to <code>./configure</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[@ficklehand - A twitter 'bot to help you make meaningless decisions]]></title>
     <link href="http://cpblog.herokuapp.com/blog/2013/02/06/at-ficklehand-a-twitter-bot-to-help-you-make-meaningless-decisions/"/>
     <updated>2013-02-06T20:07:00-05:00</updated>
     <id>http://cpblog.herokuapp.com/blog/2013/02/06/at-ficklehand-a-twitter-bot-to-help-you-make-meaningless-decisions</id>
-    <content type="html"><![CDATA[<p>How many times are you faced with fundamentally meaningless, but &#8220;difficult&#8221; to
+    <content type="html"><![CDATA[<p>How many times are you faced with fundamentally meaningless, but &ldquo;difficult&rdquo; to
 make decisions? Classic examples include choosing what to eat for lunch,
 which book to start reading or what movie to see.</p>
 
-<p>Inspired by <a href="http://www.freakonomics.com/2013/01/31/would-you-let-a-coin-toss-decide-your-future-a-new-freakonomics-radio-podcast-3/">this Freaknomics podcast</a> and conversations around the <a href="http://www.thoughtbot.com">thoughtbot</a> office, I&#8217;ve written a twitter &#8216;bot to absorb some of that <a href="http://en.wikipedia.org/wiki/Decision_fatigue">decision fatigue</a> for you.</p>
+<p>Inspired by <a href="http://www.freakonomics.com/2013/01/31/would-you-let-a-coin-toss-decide-your-future-a-new-freakonomics-radio-podcast-3/">this Freaknomics podcast</a> and conversations around the <a href="http://www.thoughtbot.com">thoughtbot</a> office, I&rsquo;ve written a twitter &lsquo;bot to absorb some of that <a href="http://en.wikipedia.org/wiki/Decision_fatigue">decision fatigue</a> for you.</p>
 
-<p>Tweet @ficklehand a tweet that contains choices separated by &#8220;or&#8221; or the pipe character (the &#8220;|&#8221; on your keyboard, for non-programmers). @ficklehand (the &#8220;fickle hand of fate&#8221;) will decide and reply to your tweet.</p>
+<p>Tweet @ficklehand a tweet that contains choices separated by &ldquo;or&rdquo; or the pipe character (the &ldquo;|&rdquo; on your keyboard, for non-programmers). @ficklehand (the &ldquo;fickle hand of fate&rdquo;) will decide and reply to your tweet.</p>
 
 <p>Example:</p>
 
@@ -43,7 +80,7 @@ which book to start reading or what movie to see.</p>
     <link href="http://cpblog.herokuapp.com/blog/2012/09/17/how-to-fix-linecache19-install-problems-on-ubuntu/"/>
     <updated>2012-09-17T13:54:00-04:00</updated>
     <id>http://cpblog.herokuapp.com/blog/2012/09/17/how-to-fix-linecache19-install-problems-on-ubuntu</id>
-    <content type="html"><![CDATA[<p>So while attempting to install the <a href="http://rubygems.org/gems/linecache19">linecache19</a> gem under rvm on ubuntu 12.04 (aka &#8220;precise&#8221;), I ran into a problem where it took a long, long time to compile.</p>
+    <content type="html"><![CDATA[<p>So while attempting to install the <a href="http://rubygems.org/gems/linecache19">linecache19</a> gem under rvm on ubuntu 12.04 (aka &ldquo;precise&rdquo;), I ran into a problem where it took a long, long time to compile.</p>
 
 <p>The fix was fairly simple:</p>
 
@@ -52,7 +89,7 @@ gem install ruby-debug19 -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-p193
 </pre>
 
 
-<p>where the last bit of that line should match your ruby version. I would imagine this&#8217;d work outside RVM with a different source path, too.</p>
+<p>where the last bit of that line should match your ruby version. I would imagine this&rsquo;d work outside RVM with a different source path, too.</p>
 ]]></content>
   </entry>
   
@@ -61,9 +98,9 @@ gem install ruby-debug19 -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-p193
     <link href="http://cpblog.herokuapp.com/blog/2012/09/09/switching-back-to-linux/"/>
     <updated>2012-09-09T17:44:00-04:00</updated>
     <id>http://cpblog.herokuapp.com/blog/2012/09/09/switching-back-to-linux</id>
-    <content type="html"><![CDATA[<p>I am a long time linux user - a developer, sysadmin, and all-arounder that uses open source software to solve problems.  Most recently, I&#8217;ve worked primarily with ruby and ruby on rails. I recently started a job with <a href="http://thoughtbot.com">thoughtbot</a>, much to my delight.</p>
+    <content type="html"><![CDATA[<p>I am a long time linux user &ndash; a developer, sysadmin, and all-arounder that uses open source software to solve problems.  Most recently, I&rsquo;ve worked primarily with ruby and ruby on rails. I recently started a job with <a href="http://thoughtbot.com">thoughtbot</a>, much to my delight.</p>
 
-<p>When I started at thoughtbot, I was given a Macbook Pro Retina, but it was made clear I could always switch back to linux. This is exceptional behavior when you think about it - thoughtbot has a way of doing things and a vast majority of its staff use osx, but they trust their developers to know their needs and loves best.</p>
+<p>When I started at thoughtbot, I was given a Macbook Pro Retina, but it was made clear I could always switch back to linux. This is exceptional behavior when you think about it &ndash; thoughtbot has a way of doing things and a vast majority of its staff use osx, but they trust their developers to know their needs and loves best.</p>
 
 <p>I figured I would give osx a try, not wanting to be a pain and figuring there are reasons why so many smart people use it.  After a month, I can say that osx is not for me.</p>
 
@@ -72,41 +109,41 @@ gem install ruby-debug19 -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-p193
 <ul>
 <li>The display is gorgeous. Text is beautiful. This is not that big a deal as most of my real work is done on an external monitor.</li>
 <li>There is a large community of developers using osx. If you want to do something, chances are you can find help at the end of a google search.</li>
-<li><a href="http://mxcl.github.com/homebrew/">homebrew</a> makes life bearable as an open source developer.  I am happy it exists, and I don&#8217;t see how you could do anything interesting without it.</li>
+<li><a href="http://mxcl.github.com/homebrew/">homebrew</a> makes life bearable as an open source developer.  I am happy it exists, and I don&rsquo;t see how you could do anything interesting without it.</li>
 <li>The open source software that I depend on runs fine on it: ruby, rvm, postgres, mongodb, redis, vim, bash, etc. Again, praise be to homebrew and open source in general.</li>
-<li>I didn&#8217;t feel particularly annoyed getting a workable development environment set up, though I do believe it&#8217;s significantly easier and more consistent on linux. <a href="http://github.com/thoughtbot/laptop">Our laptop scripts</a> were enormously helpful.</li>
-<li>There are many slick apps made only for osx that I will never / rarely use - but I get why people like them and need them.</li>
+<li>I didn&rsquo;t feel particularly annoyed getting a workable development environment set up, though I do believe it&rsquo;s significantly easier and more consistent on linux. <a href="http://github.com/thoughtbot/laptop">Our laptop scripts</a> were enormously helpful.</li>
+<li>There are many slick apps made only for osx that I will never / rarely use &ndash; but I get why people like them and need them.</li>
 <li>copy-and-paste is consistent across all applications.</li>
-<li>I like two finger &#8220;natural scrolling&#8221; - you&#8217;re &#8220;grabbing&#8221; the viewport and flinging it around, like you&#8217;re on a touch device. I will probably make my linux laptop do the same when I get it.</li>
+<li>I like two finger &ldquo;natural scrolling&rdquo; &ndash; you&rsquo;re &ldquo;grabbing&rdquo; the viewport and flinging it around, like you&rsquo;re on a touch device. I will probably make my linux laptop do the same when I get it.</li>
 </ul>
 
 
 <h2>Things that tipped me back to linux:</h2>
 
 <ul>
-<li>More hardware choices. Apple hardware is nice and all, but I like that I can optimize my working environment exactly how I want. I understand some people aren&#8217;t interested in shouldering this &#8220;burden&#8221; and want to buy hardware that works with minimal fuss. I am not one of those people. I like choices.</li>
+<li>More hardware choices. Apple hardware is nice and all, but I like that I can optimize my working environment exactly how I want. I understand some people aren&rsquo;t interested in shouldering this &ldquo;burden&rdquo; and want to buy hardware that works with minimal fuss. I am not one of those people. I like choices.</li>
 <li>There is a large community of developers on linux, and almost all ruby (and other server-side) apps built on osx end up running on linux. The community is just as large (if not larger) and oozing with talent. The open source osx / linux developer communities are largely complimentary.</li>
-<li>There are many seemingly basic features on osx that require paying money or installing software from outside the app store. Global keyboard shortcuts?  Hardware monitoring widgets? Fan control? Almost all open source software? I don&#8217;t like managing multiple sources of software (app store, homebrew, dmgs, custom compiles), and it&#8217;s a huge step backwards coming from apt. This is a big one.</li>
+<li>There are many seemingly basic features on osx that require paying money or installing software from outside the app store. Global keyboard shortcuts?  Hardware monitoring widgets? Fan control? Almost all open source software? I don&rsquo;t like managing multiple sources of software (app store, homebrew, dmgs, custom compiles), and it&rsquo;s a huge step backwards coming from apt. This is a big one.</li>
 <li>apt is amazing and works a crapton faster (no compiling, no downloading from slow project websites).  It integrates installed software into the operating system in a more standard fashion and is just enormous. You rarely need to wander outside apt to get what you need. The same can be said for yum and YaST.</li>
-<li>I don&#8217;t like how osx manages windows. I don&#8217;t like command-tab switching between apps but then command-backtick switching between open <em>windows</em> of an app, I&#8217;d rather it was all encapsulated into command-tab.  I don&#8217;t like that apps can be open without any open windows. I don&#8217;t like not having virtual desktops. I don&#8217;t like the maximize control not actually maximizing apps to the full width of the screen. I&#8217;m sure many of these issues can be fixed with software from somewhere, installed somehow, costing some amount and getting updated some way. I can make linux work any way I want, easily and for free.</li>
+<li>I don&rsquo;t like how osx manages windows. I don&rsquo;t like command-tab switching between apps but then command-backtick switching between open <em>windows</em> of an app, I&rsquo;d rather it was all encapsulated into command-tab.  I don&rsquo;t like that apps can be open without any open windows. I don&rsquo;t like not having virtual desktops. I don&rsquo;t like the maximize control not actually maximizing apps to the full width of the screen. I&rsquo;m sure many of these issues can be fixed with software from somewhere, installed somehow, costing some amount and getting updated some way. I can make linux work any way I want, easily and for free.</li>
 <li>Right click and a middle mouse button. Seriously, I miss them. Yes, I could use an external mouse.</li>
-<li>command, control, and option keys change function seemingly at random throughout many applications and parts of the os. There is a lot of cognitive investment involved in remember how to, say, tab-switch in many applications, and if you&#8217;re lucky you can customize it.</li>
-<li>Apple scares me.  I do not like their vision for the future of computing and the recent <a href="http://www.huffingtonpost.com/2012/08/24/apple-samsung-lawsuit-verdict_n_1829268.html">Apple v Samsung</a> verdict really bothers me, along with nearly every other legal action they&#8217;ve taken. Apple can&#8217;t brook any competition and is willing to do WHATEVER to kill it. They scare me more than Microsoft ever did, but fortunately they are still a bit player in desktop computing. The awful things being done to Windows 8 makes me wonder where we&#8217;re going: will people choose the pretty, simple, restrictive world of Apple devices or the freedom, flexibility and frontier town feeling that linux provides? I don&#8217;t know, but I know which is more attractive to me.</li>
-<li>I know linux well. I enjoy learning more about it, I like being able to switch desktop environments occasionally, I love the <a href="http://www.thegeekstuff.com/2010/11/linux-proc-file-system/">proc filesystem</a>, I don&#8217;t mind fixing rare little quirks. I like to tinker.</li>
-<li>The apple &#8220;reality distortion field.&#8221; Here&#8217;s one small example - the macbook pro retina doesn&#8217;t have an external sleep indicator, while all other macbooks do.  <a href="https://discussions.apple.com/thread/4027028?start=0&tstart=0">It&#8217;s not missing, it was never there.</a>  Take what you&#8217;re given.</li>
+<li>command, control, and option keys change function seemingly at random throughout many applications and parts of the os. There is a lot of cognitive investment involved in remember how to, say, tab-switch in many applications, and if you&rsquo;re lucky you can customize it.</li>
+<li>Apple scares me.  I do not like their vision for the future of computing and the recent <a href="http://www.huffingtonpost.com/2012/08/24/apple-samsung-lawsuit-verdict_n_1829268.html">Apple v Samsung</a> verdict really bothers me, along with nearly every other legal action they&rsquo;ve taken. Apple can&rsquo;t brook any competition and is willing to do WHATEVER to kill it. They scare me more than Microsoft ever did, but fortunately they are still a bit player in desktop computing. The awful things being done to Windows 8 makes me wonder where we&rsquo;re going: will people choose the pretty, simple, restrictive world of Apple devices or the freedom, flexibility and frontier town feeling that linux provides? I don&rsquo;t know, but I know which is more attractive to me.</li>
+<li>I know linux well. I enjoy learning more about it, I like being able to switch desktop environments occasionally, I love the <a href="http://www.thegeekstuff.com/2010/11/linux-proc-file-system/">proc filesystem</a>, I don&rsquo;t mind fixing rare little quirks. I like to tinker.</li>
+<li>The apple &ldquo;reality distortion field.&rdquo; Here&rsquo;s one small example &ndash; the macbook pro retina doesn&rsquo;t have an external sleep indicator, while all other macbooks do.  <a href="https://discussions.apple.com/thread/4027028?start=0&tstart=0">It&rsquo;s not missing, it was never there.</a>  Take what you&rsquo;re given.</li>
 <li><a href="http://en.wikipedia.org/wiki/Launchpad_(OS_X)">Launchpad</a> and the <a href="http://en.wikipedia.org/wiki/Dashboard_(Mac_OS)">dashboard</a> are insultingly worthless. They should be buried and forgotten. The fact that apple wastes default keyboard bindings on these turds speaks volumes. I do not like this direction at all, and if this is the future osx is clearly not for me.</li>
 </ul>
 
 
-<h2>This is the end&#8230; beautiful friend</h2>
+<h2>This is the end&hellip; beautiful friend</h2>
 
-<p>I&#8217;m glad I had a chance to immerse myself in osx. I don&#8217;t feel it impeded my productivity significantly and I understand better now why other developers like it.</p>
+<p>I&rsquo;m glad I had a chance to immerse myself in osx. I don&rsquo;t feel it impeded my productivity significantly and I understand better now why other developers like it.</p>
 
-<p>It&#8217;s not for me, though. I will be happy to be back on linux.  Developers afraid that linux is limited or difficult - you might be surprised.  The BS quotient seems about the same, honestly: but linux gives you a solid dev environment with a side of freedom and a lot more flexibility to boot.</p>
+<p>It&rsquo;s not for me, though. I will be happy to be back on linux.  Developers afraid that linux is limited or difficult &ndash; you might be surprised.  The BS quotient seems about the same, honestly: but linux gives you a solid dev environment with a side of freedom and a lot more flexibility to boot.</p>
 
 <p><strong>Update, 9/10 8:35am :</strong></p>
 
-<p>Thanks for pointing out spaces, and the alternative ways to right-click. Helpful, though not key elements of why I&#8217;m switching back.</p>
+<p>Thanks for pointing out spaces, and the alternative ways to right-click. Helpful, though not key elements of why I&rsquo;m switching back.</p>
 ]]></content>
   </entry>
   
@@ -115,9 +152,9 @@ gem install ruby-debug19 -- --with-ruby-include=$rvm_path/src/ruby-1.9.3-p193
     <link href="http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint/"/>
     <updated>2012-08-27T09:48:00-04:00</updated>
     <id>http://cpblog.herokuapp.com/blog/2012/08/27/how-to-get-good-support-from-sprint</id>
-    <content type="html"><![CDATA[<p>Don&#8217;t go to a non-corporate store.  The resellers just don&#8217;t seem to care about customers as much as the employees at the corporate stores.</p>
+    <content type="html"><![CDATA[<p>Don&rsquo;t go to a non-corporate store.  The resellers just don&rsquo;t seem to care about customers as much as the employees at the corporate stores.</p>
 
-<p>I have been lied to (directly!), gotten repeated lame excuses (You JUST missed our tech!) and generally had clueless service.  It&#8217;s farther and much more annoying to get to a corporate store for me, but the time and frustration saved is worth it. Lessons learned.</p>
+<p>I have been lied to (directly!), gotten repeated lame excuses (You JUST missed our tech!) and generally had clueless service.  It&rsquo;s farther and much more annoying to get to a corporate store for me, but the time and frustration saved is worth it. Lessons learned.</p>
 ]]></content>
   </entry>
   
